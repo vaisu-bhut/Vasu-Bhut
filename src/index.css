@@ -1,0 +1,221 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 20% 3%;
+    --foreground: 240 10% 95%;
+
+    --card: 240 15% 8%;
+    --card-foreground: 240 10% 95%;
+
+    --popover: 240 15% 8%;
+    --popover-foreground: 240 10% 95%;
+
+    --primary: 260 73% 75%;
+    --primary-foreground: 240 10% 3%;
+
+    --secondary: 217 92% 76%;
+    --secondary-foreground: 240 10% 3%;
+
+    --muted: 240 15% 15%;
+    --muted-foreground: 240 10% 65%;
+
+    --accent: 325 82% 80%;
+    --accent-foreground: 240 10% 3%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 15% 20%;
+    --input: 240 15% 20%;
+    --ring: 260 73% 75%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 240 20% 3%;
+    --sidebar-foreground: 240 10% 95%;
+    --sidebar-primary: 260 73% 75%;
+    --sidebar-primary-foreground: 240 10% 3%;
+    --sidebar-accent: 240 15% 15%;
+    --sidebar-accent-foreground: 240 10% 95%;
+    --sidebar-border: 240 15% 20%;
+    --sidebar-ring: 260 73% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary inline-block;
+  }
+
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-r from-primary to-secondary;
+  }
+
+  .gradient-border {
+    @apply relative before:absolute before:-inset-0.5 before:rounded-lg before:bg-gradient-to-r before:from-primary before:to-secondary before:-z-10;
+  }
+
+  .tab-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary text-primary-foreground;
+  }
+
+  .tab-gradient-hover {
+    @apply hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-primary-foreground;
+  }
+
+  .timeline-dot {
+    @apply absolute w-5 h-5 rounded-full bg-primary left-0 top-1 md:-left-2.5 transform -translate-x-1/2;
+  }
+  
+  .timeline-line {
+    @apply absolute w-0.5 bg-primary/50 left-0 top-6 bottom-0 md:-left-2.5 transform -translate-x-1/2;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/20;
+  }
+
+  .tech-pill {
+    @apply px-2.5 py-1 text-xs rounded-full font-mono bg-muted text-muted-foreground;
+  }
+
+  .page-section {
+    @apply pt-24;
+  }
+
+  .skill-grid {
+    @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4;
+  }
+
+  /* Custom scrollbar for the experience section */
+  .experience-scroll {
+    @apply scrollbar-thin scrollbar-thumb-primary/30 scrollbar-track-transparent;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(139, 92, 246, 0.3) transparent;
+  }
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.5), 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.glow {
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5), 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.levitate {
+  animation: levitate 4s ease-in-out infinite;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom scrollbar styling */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-thumb-primary\/30::-webkit-scrollbar-thumb {
+  background-color: rgba(139, 92, 246, 0.3);
+  border-radius: 4px;
+}
+
+.scrollbar-thumb-primary\/30::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(139, 92, 246, 0.5);
+}
+
+.scrollbar-track-transparent::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Button Animations */
+@keyframes pulse-gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: pulse-gradient 3s ease infinite;
+}
+
+/* Mobile Responsive Fixes */
+@media (max-width: 640px) {
+  .section-container {
+    @apply py-12;
+  }
+  
+  .section-title {
+    @apply text-2xl mb-6;
+  }
+  
+  .page-section {
+    @apply pt-20;
+  }
+}

@@ -1,0 +1,217 @@
+
+import { useEffect, useRef, useState } from 'react';
+import { cn } from '@/lib/utils';
+import { Briefcase } from 'lucide-react';
+
+interface ExperienceItem {
+  company: string;
+  role: string;
+  period: string;
+  location: string;
+  description: string[];
+  tech: string[];
+}
+
+const experienceData: ExperienceItem[] = [
+  {
+    company: "Xprime",
+    role: "Full Stack Software Developer",
+    period: "Sep 2023 - Mar 2024",
+    location: "Jamnagar, India",
+    description: [
+      "Designed and developed a portfolio website using the MERN stack for branding and showcasing offerings, ensuring seamless navigation and responsiveness across devices",
+      "Adopted best practices for Search Engine Optimization (SEO), improving search engine rankings and increasing customer traffic by 20%"
+    ],
+    tech: ["NextJS", "NodeJS", "ExpressJS", "TailwindCSS", "MaterialUI", "Redux", "AWS", "SEO"]
+  },
+  {
+    company: "Maqure Ventures Pvt. Ltd.",
+    role: "Full Stack Developer",
+    period: "Aug 2022 - Dec 2022",
+    location: "Ahmedabad, India",
+    description: [
+      "Built and architected a reverse auction marketplace platform using the MERN stack, with functionalities like bidding, selling, and email notifications, reducing manual processing time by 25%",
+      "Implemented role-based login access, ensuring secure anonymous trade and maintaining data integrity, reducing potential data breaches by 30%"
+    ],
+    tech: ["ReactJS", "NodeJS", "TailwindCSS", "MaterialUI", "Redux", "AWS"]
+  },
+  {
+    company: "Techno IT Hub",
+    role: "Frontend Web Developer",
+    period: "Jan 2022 - June 2022",
+    location: "Ahmedabad, India",
+    description: [
+      "Engineered a hiring platform for temporary workers with worker-to-builder matching algorithms and secure role-based access, integrating data validation and performance optimization",
+      "Utilizing Bootstrap, HTML, CSS, and MySQL to create a responsive interface showcasing services with seamless integration of functionalities"
+    ],
+    tech: ["Python", "HTML", "CSS", "MySQL", "PHP", "Netlify"]
+  },
+  {
+    company: "Inventrom Private Limited - Bolt IoT",
+    role: "Web App Developer Intern",
+    period: "Nov 2021 - Dec 2021",
+    location: "Bengaluru, India",
+    description: [
+      "Designed and developed a single-page website for Inventrom, featuring a navigation bar, background image with text, About Us section, Awards section, contact form, and footer, with smooth internal linking and responsive design across devices",
+      "Integrated HubSpot form functionality for user inquiries, enhancing interactivity, and implemented dynamic content features, adhering to project guidelines and web development best practices"
+    ],
+    tech: ["HTML", "CSS", "JavaScript", "HubSpot API"]
+  }
+];
+
+const Experience = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const timelineItemsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const sectionRef = useRef<HTMLElement>(null);
+  const rightPanelRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const index = timelineItemsRef.current.findIndex(item => item === entry.target);
+            if (index !== -1) {
+              setActiveIndex(index);
+            }
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    
+    timelineItemsRef.current.forEach(item => {
+      if (item) observer.observe(item);
+    });
+    
+    return () => {
+      timelineItemsRef.current.forEach(item => {
+        if (item) observer.unobserve(item);
+      });
+    };
+  }, []);
+
+  // Handle scroll behavior to ensure full experience section is viewed before scrolling to next section
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      if (!sectionRef.current || !rightPanelRef.current) return;
+      
+      const { scrollTop, scrollHeight, clientHeight } = rightPanelRef.current;
+      const isAtBottom = scrollHeight - scrollTop <= clientHeight + 5; // Small threshold for browser differences
+      
+      if (e.deltaY > 0 && !isAtBottom) {
+        // Scrolling down and not at bottom of experience items
+        e.preventDefault();
+        rightPanelRef.current.scrollTop += e.deltaY;
+      }
+    };
+
+    const section = sectionRef.current;
+    if (section) {
+      section.addEventListener('wheel', handleWheel, { passive: false });
+    }
+    
+    return () => {
+      if (section) {
+        section.removeEventListener('wheel', handleWheel);
+      }
+    };
+  }, []);
+  
+  return (
+    <section id="experience" ref={sectionRef} className="page-section bg-background relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-background to-transparent pointer-events-none z-10"></div>
+      
+      <div className="section-container relative">
+        <div className="flex flex-col md:flex-row items-start gap-10 md:gap-20">
+          <div className="md:sticky top-24 md:w-1/3 mb-10 md:mb-0">
+            <h2 className="section-title">Work Experience</h2>
+            <p className="text-muted-foreground mb-8">
+              My professional journey includes roles where I've delivered impactful solutions across various domains.
+            </p>
+            
+            <div className="hidden md:block">
+              <div className="space-y-2 bg-muted/30 p-2 rounded-xl">
+                {experienceData.map((exp, idx) => (
+                  <button
+                    key={idx}
+                    className={cn(
+                      "text-left w-full px-4 py-3 rounded-lg transition-all duration-300",
+                      activeIndex === idx
+                        ? "bg-primary text-primary-foreground shadow-md"
+                        : "text-muted-foreground hover:bg-muted/80"
+                    )}
+                    onClick={() => {
+                      setActiveIndex(idx);
+                      const element = timelineItemsRef.current[idx];
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                      }
+                    }}
+                  >
+                    <div className="font-medium">{exp.company}</div>
+                    <div className="text-sm opacity-90">{exp.role}</div>
+                  </button>
+                ))}
+              </div>
+            </div>
+            
+            {/* Moving dots decoration */}
+            <div className="absolute w-32 h-32 rounded-full bg-primary/5 blur-3xl -left-16 top-10 animate-float"></div>
+          </div>
+          
+          <div ref={rightPanelRef} className="md:w-2/3 max-h-[600px] overflow-y-auto no-scrollbar pr-4">
+            <div className="relative pl-8 md:pl-12 border-l border-primary/30">
+              {experienceData.map((experience, idx) => (
+                <div
+                  key={idx}
+                  ref={el => timelineItemsRef.current[idx] = el}
+                  className={cn(
+                    "mb-16 relative transition-all duration-500",
+                    activeIndex === idx ? "opacity-100" : "opacity-50"
+                  )}
+                >
+                  <div className="timeline-dot">
+                    <span className={cn(
+                      "absolute inset-0 rounded-full",
+                      activeIndex === idx ? "animate-ping bg-primary/50" : "bg-muted/50"
+                    )}></span>
+                    <Briefcase size={14} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                  </div>
+                  {idx !== experienceData.length - 1 && <div className="timeline-line"></div>}
+                  
+                  <div className="ml-8 md:ml-10">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                      <h3 className="text-xl font-bold gradient-text">{experience.company}</h3>
+                      <span className="text-sm text-muted-foreground">{experience.period}</span>
+                    </div>
+                    
+                    <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-4">
+                      <span className="text-lg font-medium">{experience.role}</span>
+                      <span className="hidden md:block text-muted-foreground">•</span>
+                      <span className="text-sm text-muted-foreground">{experience.location}</span>
+                    </div>
+                    
+                    <ul className="list-disc list-inside space-y-2 mb-4 text-muted-foreground">
+                      {experience.description.map((item, i) => (
+                        <li key={i} className="text-sm md:text-base">{item}</li>
+                      ))}
+                    </ul>
+                    
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {experience.tech.map((tech, i) => (
+                        <span key={i} className="tech-pill">{tech}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Experience;
