@@ -29,7 +29,7 @@ const projectsData: Project[] = [
       "Addressed synthetic data challenges by cross-validating with the original dataset, ensuring robustness against distribution shifts",
       "Deployed Scikit-learn pipelines for reproducible preprocessing"
     ],
-    githubUrl: "https://github.com/bhut-vasu"
+    githubUrl: "https://github.com/vaisu-bhut/Loan-Prediction"
   },
   {
     title: "AI-Powered Web Scraper",
@@ -42,7 +42,7 @@ const projectsData: Project[] = [
       "Implemented real-time data streaming via WebSockets",
       "Built a user-friendly frontend interface for non-technical users"
     ],
-    githubUrl: "https://github.com/bhut-vasu"
+    githubUrl: "https://github.com/vaisu-bhut/Project-Information"
   },
   {
     title: "Podcast Listening Analysis",
@@ -55,7 +55,7 @@ const projectsData: Project[] = [
       "Containerized workflow with Docker and orchestrated via Apache Airflow",
       "Enabled reproducible, one-command execution on local machines without cloud dependencies"
     ],
-    githubUrl: "https://github.com/bhut-vasu"
+    githubUrl: "https://github.com/vaisu-bhut/Podcast-Listening-Analysis"
   },
   {
     title: "AI-Powered Personalized Health Assistant",
@@ -68,7 +68,7 @@ const projectsData: Project[] = [
       "Enhanced security with a custom PromptDefender class, achieving 91% success rate in blocking prompt injection attacks",
       "Designed an interactive user experience enabling profile management and real-time health guidance"
     ],
-    githubUrl: "https://github.com/bhut-vasu"
+    githubUrl: "https://github.com/vaisu-bhut/Health-Assistant"
   },
   {
     title: "ArcFit Fitness",
@@ -80,8 +80,8 @@ const projectsData: Project[] = [
       "Added a lightweight Node/Express backend with Nodemailer for contact form submissions"
     ],
     liveDemoUrl: "https://arcfit.vasubhut.com",
-    githubUrl: "https://github.com/bhut-vasu",
-    imageUrl: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+    githubUrl: "https://github.com/vaisu-bhut/ArcFit",
+    imageUrl: "/public/assets/Projects/ArcFit.png"
   },
   {
     title: "UberOla – Car Rental Booking",
@@ -93,8 +93,8 @@ const projectsData: Project[] = [
       "Mobile-first UI with collapsible sidebar for desktop and bottom-bar for mobile"
     ],
     liveDemoUrl: "https://uberola.vasubhut.com",
-    githubUrl: "https://github.com/bhut-vasu",
-    imageUrl: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+    githubUrl: "https://github.com/vaisu-bhut/UberOla",
+    imageUrl: "/public/assets/Projects/UberOla.png"
   },
   {
     title: "OpenAI Article Summarizer",
@@ -105,9 +105,9 @@ const projectsData: Project[] = [
       "Uses RTK Query to hit RapidAPI's extractor endpoint for article summaries",
       "Features localStorage-based caching and instant copy-to-clipboard UX"
     ],
-    liveDemoUrl: "https://summarizer.vasubhut.com",
-    githubUrl: "https://github.com/bhut-vasu",
-    imageUrl: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXJ0aWNsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    liveDemoUrl: "https://theai.vasubhut.com",
+    githubUrl: "https://github.com/vaisu-bhut/Theai",
+    imageUrl: "/public/assets/Projects/TheAI.png"
   },
   {
     title: "Texty – Text Converter & Analyzer",
@@ -119,8 +119,8 @@ const projectsData: Project[] = [
       "Lightweight React hooks-based UI with Bootstrap styling"
     ],
     liveDemoUrl: "https://texty.vasubhut.com",
-    githubUrl: "https://github.com/bhut-vasu",
-    imageUrl: "https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d3JpdGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    githubUrl: "https://github.com/vaisu-bhut/Texty",
+    imageUrl: "/public/assets/Projects/Texty.png"
   },
   {
     title: "JustYours E-Commerce Store",
@@ -132,8 +132,8 @@ const projectsData: Project[] = [
       "Newsletter capture & automated email workflow with Nodemailer"
     ],
     liveDemoUrl: "https://justyours.vasubhut.com",
-    githubUrl: "https://github.com/bhut-vasu",
-    imageUrl: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2hvcHBpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+    githubUrl: "https://github.com/vaisu-bhut/JustYours",
+    imageUrl: "/public/assets/Projects/JustYours.png"
   },
   {
     title: "SnakeMania",
@@ -145,8 +145,8 @@ const projectsData: Project[] = [
       "Audio effects and localStorage for persistent high scores"
     ],
     liveDemoUrl: "https://snakemania.vasubhut.com",
-    githubUrl: "https://github.com/bhut-vasu",
-    imageUrl: "https://images.unsplash.com/photo-1605979257913-1704eb7b6246?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c25ha2UlMjBnYW1lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+    githubUrl: "https://github.com/vaisu-bhut/SnakeMania",
+    imageUrl: "/public/assets/Projects/SnakeMania.png"
   },
   {
     title: "TheRichMindset Blog",
@@ -157,9 +157,9 @@ const projectsData: Project[] = [
       "Features carousel hero, animated navbar, and card-style article grid",
       "Styled with Bootstrap 5 components and Tailwind utility classes"
     ],
-    liveDemoUrl: "https://mindset.vasubhut.com",
-    githubUrl: "https://github.com/bhut-vasu",
-    imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxvZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    liveDemoUrl: "https://therichmindset.vasubhut.com",
+    githubUrl: "https://github.com/vaisu-bhut/TheRichMindset",
+    imageUrl: "/public/assets/Projects/TheRichMindset.png"
   }
 ];
 
@@ -239,7 +239,7 @@ const Projects = () => {
                   {/* Image Preview */}
                   <div className="relative h-48 md:h-full overflow-hidden">
                     <img 
-                      src={project.imageUrl || "https://via.placeholder.com/300x200"} 
+                      src={project.imageUrl} 
                       alt={project.title} 
                       className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                     />
