@@ -44,7 +44,7 @@ const Hero = () => {
       <div className="absolute top-[-50%] right-[-20%] w-[70vw] h-[70vw] rounded-full bg-gradient-to-br from-primary/5 to-secondary/5 blur-3xl"></div>
       <div className="absolute bottom-[-30%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-gradient-to-tr from-accent/5 to-primary/5 blur-3xl"></div>
 
-      <div className="container mx-auto px-6 py-24 md:py-32 relative z-10">
+      <div className="container mx-auto px-6 md:py-32 relative z-10">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
           <div className="md:w-3/5 animate-fade-in">
             <div className="mb-3 flex flex-wrap gap-2">
@@ -71,12 +71,22 @@ const Hero = () => {
             </h1>
 
             <p
-              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl parallax-element"
+              className="text-lg md:text-xxl text-muted-foreground mb-8 max-w-xl parallax-element"
               data-speed="0.5"
             >
-              A passionate full-stack developer with a master's degree in
-              Information Systems from Northeastern University. Specializing in
-              creating responsive web applications with modern technologies.
+              <span className="block">
+                Boston-based full-stack developer and Northeastern MSIS
+                student;
+              </span>
+              <span className="block">
+                Skilled in MERN, Python, cloud, and big-data tooling;
+              </span>
+              <span className="block">
+                Builds secure, scalable products with rigorous CI/CD;
+              </span>
+              <span className="block">
+                Recharges on the badminton court and in Clash Royale Arena;
+              </span>
             </p>
 
             <div className="flex gap-4 items-center mb-8">
@@ -135,7 +145,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce-slow hidden md:block">
           <div className="w-6 h-10 rounded-full border-2 border-muted-foreground flex items-start justify-center p-1">
             <div className="w-1 h-2 bg-primary rounded-full animate-bounce-slow"></div>
           </div>

@@ -22,7 +22,7 @@ const projectsData: Project[] = [
     title: "Loan Approval Prediction",
     category: "Data Science",
     description: "A machine learning model for predicting loan approvals with high accuracy.",
-    technologies: ["Python", "Scikit-learn", "XGBoost", "Pandas", "NumPy"],
+    technologies: ["Python", "Scikit-learn", "XGBoost", "Pandas", "NumPy", "Feature Engineering", "Hyperparameter Tuning", "Cross-Validation"],
     details: [
       "Built a loan approval predictor using synthetic financial data, achieving ROC-AUC = 0.96037 (currently top on Kaggle leaderboard)",
       "Feature engineering techniques like debt-to-income ratio calculation and XGBoost tuned with RandomizedSearchCV",
@@ -35,7 +35,7 @@ const projectsData: Project[] = [
     title: "AI-Powered Web Scraper",
     category: "Data Engineering",
     description: "A web scraping API with FastAPI and Playwright that extracts structured content from any URL.",
-    technologies: ["Python", "FastAPI", "Playwright", "BeautifulSoup", "WebSockets"],
+    technologies: ["Python", "FastAPI", "Playwright", "BeautifulSoup", "WebSockets", "Pydantic"],
     details: [
       "Developed a web scraping API with FastAPI and Playwright, extracting structured content from any public URL",
       "Support for recursive crawling and JavaScript rendering",
@@ -48,7 +48,7 @@ const projectsData: Project[] = [
     title: "Podcast Listening Analysis",
     category: "Data Engineering",
     description: "A scalable data pipeline for predicting podcast listening duration with advanced analytics.",
-    technologies: ["Python", "Apache Spark", "Scikit-learn", "Apache Airflow", "Docker"],
+    technologies: ["Python", "Apache Spark", "Scikit-learn", "XGBoost", "Apache Airflow", "Ploty", "Docker", "Parquet"],
     details: [
       "Built a scalable data pipeline using PySpark and Spark-XGBoost to predict podcast listening duration",
       "Advanced feature engineering including sentiment scores and ad density analysis",
@@ -61,7 +61,7 @@ const projectsData: Project[] = [
     title: "AI-Powered Personalized Health Assistant",
     category: "Data Science",
     description: "An AI-driven health assistant that provides personalized fitness and nutrition recommendations.",
-    technologies: ["Python", "OpenAI API", "LangChain", "LangGraph", "Streamlit"],
+    technologies: ["Python", "OpenAI API", "LangChain", "LangGraph", "Streamlit", "Pandas", "NumPy"],
     details: [
       "Engineered an AI-driven health assistant using fine-tuned GPT-3.5-Turbo",
       "Utilized LangChain/LangGraph workflows for personalized recommendations",
@@ -203,7 +203,7 @@ const Projects = () => {
         <h2 className="section-title">Projects</h2>
         
         {/* Project tabs - updated design */}
-        <div className="bg-muted/30 p-2 rounded-xl flex flex-wrap mb-8">
+        <div className="bg-muted/30 py-2 px-3 rounded-xl flex flex-wrap mb-8">
           {(['All', 'Data Science', 'Data Engineering', 'Software Development'] as ProjectCategory[]).map((category) => (
             <button
               key={category}

@@ -216,6 +216,6 @@
   }
   
   .page-section {
-    @apply pt-20;
+    @apply pt-0;
   }
 }

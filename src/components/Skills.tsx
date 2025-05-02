@@ -15,70 +15,71 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Programming",
     skills: [
-      { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-      { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-      { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-      { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-      { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
-      { name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" }
+      { name: "Python", logo: "/public/assets/Tools/Programming/Python.svg" },
+      { name: "JavaScript", logo: "/public/assets/Tools/Programming/Javascript.svg" },
+      { name: "TypeScript", logo: "/public/assets/Tools/Programming/Typescript.svg" },
+      { name: "Java", logo: "/public/assets/Tools/Programming/Java.svg" },
+      { name: "C++", logo: "/public/assets/Tools/Programming/C++.svg" },
     ]
   },
   {
     name: "Frontend",
     skills: [
-      { name: "ReactJS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "NextJS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-      { name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-      { name: "CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-      { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" },
-      { name: "Material UI", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" },
-      { name: "Bootstrap", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
-      { name: "Redux", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" }
+      { name: "ReactJS", logo: "/public/assets/Tools/Frontend/ReactJs.svg" },
+      { name: "NextJS", logo: "/public/assets/Tools/Frontend/NextJs.svg" },
+      { name: "HTML", logo: "/public/assets/Tools/Frontend/Html.svg" },
+      { name: "CSS", logo: "/public/assets/Tools/Frontend/Css.svg" },
+      { name: "SCSS", logo: "/public/assets/Tools/Frontend/Sass.svg" },
+      { name: "Tailwind CSS", logo: "/public/assets/Tools/Frontend/Tailwind.svg" },
+      { name: "Material UI", logo: "/public/assets/Tools/Frontend/MaterialUI.svg" },
+      { name: "Bootstrap", logo: "/public/assets/Tools/Frontend/Bootstrap.svg" },
+      { name: "Redux", logo: "/public/assets/Tools/Frontend/Redux.svg" }
     ]
   },
   {
     name: "Backend",
     skills: [
-      { name: "NodeJS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-      { name: "ExpressJS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-      { name: "FastAPI", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
-      { name: "REST API", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-      { name: "WebSockets", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" }
+      { name: "NodeJS", logo: "/public/assets/Tools/Backend/Nodejs.svg" },
+      { name: "ExpressJS", logo: "/public/assets/Tools/Backend/Expressjs.png" },
+      { name: "FastAPI", logo: "/public/assets/Tools/Backend/FastAPI.svg" },
+      { name: "REST API", logo: "/public/assets/Tools/Backend/RestAPI.svg" },
+      { name: "WebSockets", logo: "/public/assets/Tools/Backend/Websockets.png" },
+      { name: "Database Design", logo: "/public/assets/Tools/Backend/DatabaseDesign.svg" },
     ]
   },
   {
     name: "Database",
     skills: [
-      { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-      { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-      { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-      { name: "DynamoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" }
+      { name: "MongoDB", logo: "/public/assets/Tools/Database/MongoDB.svg" },
+      { name: "MySQL", logo: "/public/assets/Tools/Database/MySQL.svg" },
+      { name: "PostgreSQL", logo: "/public/assets/Tools/Database/PostGreSQL.svg" },
+      { name: "DynamoDB", logo: "/public/assets/Tools/Database/DynamoDB.svg" }
     ]
   },
   {
     name: "ML & Data",
     skills: [
-      { name: "Scikit-learn", logo: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" },
-      { name: "Pandas", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
-      { name: "NumPy", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
-      { name: "XGBoost", logo: "https://upload.wikimedia.org/wikipedia/commons/6/69/XGBoost_logo.png" },
-      { name: "PyTorch", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
-      { name: "Apache Spark", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" },
-      { name: "Feature Engineering", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" }
+      { name: "Scikit-learn", logo: "/public/assets/Tools/ML&Data/Scikit.svg" },
+      { name: "Pandas", logo: "/public/assets/Tools/ML&Data/pandas.svg" },
+      { name: "NumPy", logo: "/public/assets/Tools/ML&Data/numpy.svg" },
+      { name: "XGBoost", logo: "/public/assets/Tools/ML&Data/XGBoost.png" },
+      { name: "PyTorch", logo: "/public/assets/Tools/ML&Data/pytorch.svg" },
+      { name: "Apache Spark", logo: "/public/assets/Tools/ML&Data/spark.svg" },
+      { name: "Feature Engineering", logo: "/public/assets/Tools/ML&Data/feature.jpg" }
     ]
   },
   {
     name: "DevOps & Tools",
     skills: [
-      { name: "Git/GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-      { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-      { name: "AWS S3", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
-      { name: "AWS EC2", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
-      { name: "AWS CloudFront", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
-      { name: "AWS Route53", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
-      { name: "Vercel", logo: "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/favicon-32x32.png" },
-      { name: "Netlify", logo: "https://www.netlify.com/v3/img/components/logomark.png" },
-      { name: "Apache Airflow", logo: "https://airflow.apache.org/images/feature-image.png" }
+      { name: "Git/GitHub", logo: "/public/assets/Tools/Tools/git.svg" },
+      { name: "Docker", logo: "/public/assets/Tools/Tools/docker.svg" },
+      { name: "AWS S3", logo: "/public/assets/Tools/Tools/feature.jpg" },
+      { name: "AWS EC2", logo: "/public/assets/Tools/Tools/feature.jpg" },
+      { name: "AWS CloudFront", logo: "/public/assets/Tools/Tools/feature.jpg" },
+      { name: "AWS Route53", logo: "/public/assets/Tools/Tools/feature.jpg" },
+      { name: "Vercel", logo: "/public/assets/Tools/Tools/vercel.png" },
+      { name: "Netlify", logo: "/public/assets/Tools/Tools/netlify.png" },
+      { name: "Apache Airflow", logo: "/public/assets/Tools/Tools/airflow.png" }
     ]
   }
 ];
