@@ -15,79 +15,79 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Programming",
     skills: [
-      { name: "Python", logo: "/public/assets/Tools/Programming/Python.svg" },
-      { name: "JavaScript", logo: "/public/assets/Tools/Programming/Javascript.svg" },
-      { name: "TypeScript", logo: "/public/assets/Tools/Programming/Typescript.svg" },
-      { name: "Java", logo: "/public/assets/Tools/Programming/Java.svg" },
-      { name: "C++", logo: "/public/assets/Tools/Programming/C++.svg" },
+      { name: "Python", logo: "/assets/Tools/Programming/Python.svg" },
+      { name: "JavaScript", logo: "/assets/Tools/Programming/Javascript.svg" },
+      { name: "TypeScript", logo: "/assets/Tools/Programming/Typescript.svg" },
+      { name: "Java", logo: "/assets/Tools/Programming/Java.svg" },
+      { name: "C++", logo: "/assets/Tools/Programming/C++.svg" },
     ]
   },
   {
     name: "Frontend",
     skills: [
-      { name: "ReactJS", logo: "/public/assets/Tools/Frontend/ReactJs.svg" },
-      { name: "NextJS", logo: "/public/assets/Tools/Frontend/NextJs.svg" },
-      { name: "HTML", logo: "/public/assets/Tools/Frontend/Html.svg" },
-      { name: "CSS", logo: "/public/assets/Tools/Frontend/Css.svg" },
-      { name: "SCSS", logo: "/public/assets/Tools/Frontend/Sass.svg" },
-      { name: "Tailwind CSS", logo: "/public/assets/Tools/Frontend/Tailwind.svg" },
-      { name: "Material UI", logo: "/public/assets/Tools/Frontend/MaterialUI.svg" },
-      { name: "Shadcn UI", logo: "/public/assets/Tools/Frontend/shadcn.png" },
-      { name: "Radix UI", logo: "/public/assets/Tools/Frontend/radix.png" },
-      { name: "Bootstrap", logo: "/public/assets/Tools/Frontend/Bootstrap.svg" },
-      { name: "Redux", logo: "/public/assets/Tools/Frontend/Redux.svg" }
+      { name: "ReactJS", logo: "/assets/Tools/Frontend/ReactJs.svg" },
+      { name: "NextJS", logo: "/assets/Tools/Frontend/NextJs.svg" },
+      { name: "HTML", logo: "/assets/Tools/Frontend/Html.svg" },
+      { name: "CSS", logo: "/assets/Tools/Frontend/Css.svg" },
+      { name: "SCSS", logo: "/assets/Tools/Frontend/Sass.svg" },
+      { name: "Tailwind CSS", logo: "/assets/Tools/Frontend/Tailwind.svg" },
+      { name: "Material UI", logo: "/assets/Tools/Frontend/MaterialUI.svg" },
+      { name: "Shadcn UI", logo: "/assets/Tools/Frontend/shadcn.png" },
+      { name: "Radix UI", logo: "/assets/Tools/Frontend/radix.png" },
+      { name: "Bootstrap", logo: "/assets/Tools/Frontend/Bootstrap.svg" },
+      { name: "Redux", logo: "/assets/Tools/Frontend/Redux.svg" }
     ]
   },
   {
     name: "Backend",
     skills: [
-      { name: "NodeJS", logo: "/public/assets/Tools/Backend/Nodejs.svg" },
-      { name: "ExpressJS", logo: "/public/assets/Tools/Backend/Expressjs.png" },
-      { name: "FastAPI", logo: "/public/assets/Tools/Backend/FastAPI.svg" },
-      { name: "REST API", logo: "/public/assets/Tools/Backend/RestAPI.svg" },
-      { name: "WebSockets", logo: "/public/assets/Tools/Backend/Websockets.png" },
-      { name: "Database Design", logo: "/public/assets/Tools/Backend/DatabaseDesign.svg" },
+      { name: "NodeJS", logo: "/assets/Tools/Backend/Nodejs.svg" },
+      { name: "ExpressJS", logo: "/assets/Tools/Backend/Expressjs.png" },
+      { name: "FastAPI", logo: "/assets/Tools/Backend/FastAPI.svg" },
+      { name: "REST API", logo: "/assets/Tools/Backend/RestAPI.svg" },
+      { name: "WebSockets", logo: "/assets/Tools/Backend/Websockets.png" },
+      { name: "Database Design", logo: "/assets/Tools/Backend/DatabaseDesign.svg" },
     ]
   },
   {
     name: "Database",
     skills: [
-      { name: "MongoDB", logo: "/public/assets/Tools/Database/MongoDB.svg" },
-      { name: "MySQL", logo: "/public/assets/Tools/Database/MySQL.svg" },
-      { name: "PostgreSQL", logo: "/public/assets/Tools/Database/PostGreSQL.svg" },
-      { name: "DynamoDB", logo: "/public/assets/Tools/Database/DynamoDB.svg" }
+      { name: "MongoDB", logo: "/assets/Tools/Database/MongoDB.svg" },
+      { name: "MySQL", logo: "/assets/Tools/Database/MySQL.svg" },
+      { name: "PostgreSQL", logo: "/assets/Tools/Database/PostGreSQL.svg" },
+      { name: "DynamoDB", logo: "/assets/Tools/Database/DynamoDB.svg" }
     ]
   },
   {
     name: "ML & Data",
     skills: [
-      { name: "Scikit-learn", logo: "/public/assets/Tools/ML&Data/Scikit.svg" },
-      { name: "Pandas", logo: "/public/assets/Tools/ML&Data/pandas.svg" },
-      { name: "NumPy", logo: "/public/assets/Tools/ML&Data/numpy.svg" },
-      { name: "XGBoost", logo: "/public/assets/Tools/ML&Data/XGBoost.png" },
-      { name: "LightGBM", logo: "/public/assets/Tools/ML&Data/lightgbm.svg" },
-      { name: "PyTorch", logo: "/public/assets/Tools/ML&Data/pytorch.svg" },
-      { name: "Apache Spark", logo: "/public/assets/Tools/ML&Data/spark.svg" },
-      { name: "Feature Engineering", logo: "/public/assets/Tools/ML&Data/feature.svg" },
-      { name: "Fine Tuning", logo: "/public/assets/Tools/ML&Data/fine-tuning.png" },
-      { name: "Prompt Engineering", logo: "/public/assets/Tools/ML&Data/prompt-engineering.svg" },
-      { name: "Ploty", logo: "/public/assets/Tools/ML&Data/ploty.svg" },
-      { name: "MatPlotlib", logo: "/public/assets/Tools/ML&Data/Matplotlib.svg" },
+      { name: "Scikit-learn", logo: "/assets/Tools/ML&Data/Scikit.svg" },
+      { name: "Pandas", logo: "/assets/Tools/ML&Data/pandas.svg" },
+      { name: "NumPy", logo: "/assets/Tools/ML&Data/numpy.svg" },
+      { name: "XGBoost", logo: "/assets/Tools/ML&Data/XGBoost.png" },
+      { name: "LightGBM", logo: "/assets/Tools/ML&Data/lightgbm.svg" },
+      { name: "PyTorch", logo: "/assets/Tools/ML&Data/pytorch.svg" },
+      { name: "Apache Spark", logo: "/assets/Tools/ML&Data/spark.svg" },
+      { name: "Feature Engineering", logo: "/assets/Tools/ML&Data/feature.svg" },
+      { name: "Fine Tuning", logo: "/assets/Tools/ML&Data/fine-tuning.png" },
+      { name: "Prompt Engineering", logo: "/assets/Tools/ML&Data/prompt-engineering.svg" },
+      { name: "Ploty", logo: "/assets/Tools/ML&Data/ploty.svg" },
+      { name: "MatPlotlib", logo: "/assets/Tools/ML&Data/Matplotlib.svg" },
     ]
   },
   {
     name: "DevOps & Tools",
     skills: [
-      { name: "Git/GitHub", logo: "/public/assets/Tools/Tools/git.svg" },
-      { name: "Docker", logo: "/public/assets/Tools/Tools/docker.svg" },
-      { name: "AWS S3", logo: "/public/assets/Tools/Tools/s3.svg" },
-      { name: "AWS EC2", logo: "/public/assets/Tools/Tools/ec2.svg" },
-      { name: "AWS CloudFront", logo: "/public/assets/Tools/Tools/cloudfront.svg" },
-      { name: "AWS Route53", logo: "/public/assets/Tools/Tools/route53.svg" },
-      { name: "Vercel", logo: "/public/assets/Tools/Tools/vercel.png" },
-      { name: "Netlify", logo: "/public/assets/Tools/Tools/netlify.png" },
-      { name: "Render", logo: "/public/assets/Tools/Tools/render.jpeg" },
-      { name: "Apache Airflow", logo: "/public/assets/Tools/Tools/airflow.svg" }
+      { name: "Git/GitHub", logo: "/assets/Tools/Tools/git.svg" },
+      { name: "Docker", logo: "/assets/Tools/Tools/docker.svg" },
+      { name: "AWS S3", logo: "/assets/Tools/Tools/s3.svg" },
+      { name: "AWS EC2", logo: "/assets/Tools/Tools/ec2.svg" },
+      { name: "AWS CloudFront", logo: "/assets/Tools/Tools/cloudfront.svg" },
+      { name: "AWS Route53", logo: "/assets/Tools/Tools/route53.svg" },
+      { name: "Vercel", logo: "/assets/Tools/Tools/vercel.png" },
+      { name: "Netlify", logo: "/assets/Tools/Tools/netlify.png" },
+      { name: "Render", logo: "/assets/Tools/Tools/render.jpeg" },
+      { name: "Apache Airflow", logo: "/assets/Tools/Tools/airflow.svg" }
     ]
   }
 ];

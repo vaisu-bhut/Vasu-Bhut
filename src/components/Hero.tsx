@@ -175,7 +175,7 @@ const Hero = () => {
 
             {/* profile image floats gently */}
             <img
-              src="public/assets/profile.png" // adjust path if needed
+              src="/assets/profile.png" // adjust path if needed
               alt="Profile picture"
               className="relative z-10 w-52 h-52 md:w-72 md:h-72 object-cover rounded-2xl levitate"
             />
