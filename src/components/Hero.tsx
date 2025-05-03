@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 import AnimatedCube from "./AnimatedCube";
 import { Github, Mail, Linkedin } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -75,8 +76,7 @@ const Hero = () => {
               data-speed="0.5"
             >
               <span className="block">
-                Boston-based full-stack developer and Northeastern MSIS
-                student;
+                Boston-based full-stack developer and Northeastern MSIS student;
               </span>
               <span className="block">
                 Skilled in MERN, Python, cloud, and big-data tooling;
@@ -134,13 +134,50 @@ const Hero = () => {
           </div>
 
           <div
-            className="md:w-2/5 flex justify-center parallax-element"
+            className="relative md:w-2/5 flex justify-center parallax-element"
             data-speed="-0.8"
           >
+            {/* animated gradient blob */}
+            <motion.div
+              initial={{ scale: 0.9, rotate: 0 }}
+              animate={{ scale: 1.05, rotate: 360 }}
+              transition={{
+                repeat: Infinity,
+                duration: 20,
+                ease: "linear",
+              }}
+              className="absolute inset-0 flex items-center justify-center"
+              aria-hidden
+            >
+              <svg
+                viewBox="0 0 200 200"
+                className="w-72 h-72 md:w-96 md:h-96 blur-2xl opacity-70"
+              >
+                <defs>
+                  <linearGradient
+                    id="blobGrad"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stopColor="#7b3fe4" />
+                    <stop offset="100%" stopColor="#ff67d2" />
+                  </linearGradient>
+                </defs>
+                <path
+                  fill="url(#blobGrad)"
+                  d="M43.8,-64.2C54.6,-56,60,-43.5,65.1,-30.7C70.2,-17.9,74.9,-4.9,73.4,7.2C71.9,19.3,64.3,30.5,55.2,40.2C46.1,49.8,35.5,58,23.7,63.8C11.8,69.6,-1.2,73,-12.6,70.7C-24.1,68.4,-33.9,60.3,-44,51C-54,41.6,-64.3,31,-68.8,18.4C-73.4,5.8,-72.2,-9.9,-67,-25.4C-61.9,-40.9,-52.8,-56.1,-40.1,-64.2C-27.4,-72.3,-13.7,-73.3,0.6,-74.1C14.8,-74.9,29.6,-75.7,43.8,-64.2Z"
+                  transform="translate(100 100)"
+                />
+              </svg>
+            </motion.div>
+
+            {/* profile image floats gently */}
             <img
-              src="/public/assets/profile.png" // update path
+              src="public/assets/profile.png" // adjust path if needed
               alt="Profile picture"
-              className="w-52 h-52 md:w-72 md:h-72 object-contain levitate"
+              className="relative z-10 w-52 h-52 md:w-72 md:h-72 object-cover rounded-2xl levitate"
             />
           </div>
         </div>

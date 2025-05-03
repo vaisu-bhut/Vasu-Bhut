@@ -32,6 +32,8 @@ const skillCategories: SkillCategory[] = [
       { name: "SCSS", logo: "/public/assets/Tools/Frontend/Sass.svg" },
       { name: "Tailwind CSS", logo: "/public/assets/Tools/Frontend/Tailwind.svg" },
       { name: "Material UI", logo: "/public/assets/Tools/Frontend/MaterialUI.svg" },
+      { name: "Shadcn UI", logo: "/public/assets/Tools/Frontend/shadcn.png" },
+      { name: "Radix UI", logo: "/public/assets/Tools/Frontend/radix.png" },
       { name: "Bootstrap", logo: "/public/assets/Tools/Frontend/Bootstrap.svg" },
       { name: "Redux", logo: "/public/assets/Tools/Frontend/Redux.svg" }
     ]
@@ -63,9 +65,14 @@ const skillCategories: SkillCategory[] = [
       { name: "Pandas", logo: "/public/assets/Tools/ML&Data/pandas.svg" },
       { name: "NumPy", logo: "/public/assets/Tools/ML&Data/numpy.svg" },
       { name: "XGBoost", logo: "/public/assets/Tools/ML&Data/XGBoost.png" },
+      { name: "LightGBM", logo: "/public/assets/Tools/ML&Data/lightgbm.svg" },
       { name: "PyTorch", logo: "/public/assets/Tools/ML&Data/pytorch.svg" },
       { name: "Apache Spark", logo: "/public/assets/Tools/ML&Data/spark.svg" },
-      { name: "Feature Engineering", logo: "/public/assets/Tools/ML&Data/feature.jpg" }
+      { name: "Feature Engineering", logo: "/public/assets/Tools/ML&Data/feature.svg" },
+      { name: "Fine Tuning", logo: "/public/assets/Tools/ML&Data/fine-tuning.png" },
+      { name: "Prompt Engineering", logo: "/public/assets/Tools/ML&Data/prompt-engineering.svg" },
+      { name: "Ploty", logo: "/public/assets/Tools/ML&Data/ploty.svg" },
+      { name: "MatPlotlib", logo: "/public/assets/Tools/ML&Data/Matplotlib.svg" },
     ]
   },
   {
@@ -73,13 +80,14 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Git/GitHub", logo: "/public/assets/Tools/Tools/git.svg" },
       { name: "Docker", logo: "/public/assets/Tools/Tools/docker.svg" },
-      { name: "AWS S3", logo: "/public/assets/Tools/Tools/feature.jpg" },
-      { name: "AWS EC2", logo: "/public/assets/Tools/Tools/feature.jpg" },
-      { name: "AWS CloudFront", logo: "/public/assets/Tools/Tools/feature.jpg" },
-      { name: "AWS Route53", logo: "/public/assets/Tools/Tools/feature.jpg" },
+      { name: "AWS S3", logo: "/public/assets/Tools/Tools/s3.svg" },
+      { name: "AWS EC2", logo: "/public/assets/Tools/Tools/ec2.svg" },
+      { name: "AWS CloudFront", logo: "/public/assets/Tools/Tools/cloudfront.svg" },
+      { name: "AWS Route53", logo: "/public/assets/Tools/Tools/route53.svg" },
       { name: "Vercel", logo: "/public/assets/Tools/Tools/vercel.png" },
       { name: "Netlify", logo: "/public/assets/Tools/Tools/netlify.png" },
-      { name: "Apache Airflow", logo: "/public/assets/Tools/Tools/airflow.png" }
+      { name: "Render", logo: "/public/assets/Tools/Tools/render.jpeg" },
+      { name: "Apache Airflow", logo: "/public/assets/Tools/Tools/airflow.svg" }
     ]
   }
 ];
