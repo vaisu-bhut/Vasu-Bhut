@@ -15,7 +15,7 @@ const experienceData: ExperienceItem[] = [
   {
     company: "Xprime",
     role: "Full Stack Software Developer",
-    period: "Sep 2023 - Mar 2024",
+    period: "Aug 2023 - Jul 2024",
     location: "Jamnagar, India",
     description: [
       "Designed and developed a portfolio website using the MERN stack for branding and showcasing offerings, ensuring seamless navigation and responsiveness across devices",
