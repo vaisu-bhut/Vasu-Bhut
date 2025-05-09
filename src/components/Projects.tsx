@@ -71,6 +71,35 @@ const projectsData: Project[] = [
     githubUrl: "https://github.com/vaisu-bhut/Health-Assistant"
   },
   {
+    title: "Conlieve - Network Management Companion",
+    category: "Software Development",
+    description: "A responsive fitness website with BMI calculator and class scheduling",
+    technologies: ["React.js", "Tailwind CSS", "Node.js", "Express", "MongoDB", "AWS (S3, CloudFront, Lambda, API Gateway)"],
+    details: [
+      "Deployed as a Progressive Web App (PWA) using AWS S3 for static hosting, CloudFront for global CDN distribution, and Lambda/API Gateway for backend scalability, ensuring consistency via MongoDB",
+      "Developed a privacy-focused relationship manager with contact profiles (tags, notes, interaction history), dashboards for visual analytics (growth trends, network maps), and customizable reminders to streamline personal/professional connections",
+      "Ensured data security with local-first storage, optional AES-256 encrypted cloud sync, and zero third-party tracking, hosted entirely on user-controlled AWS infrastructure for full transparency"
+    ],
+    liveDemoUrl: "https://connect.vasubhut.com",
+    githubUrl: "",
+    imageUrl: "/public/assets/Projects/Conlieve.png"
+  },
+  {
+    title: "Drug Development Lifecycle Management System (ReguPharm)",
+    category: "Software Development",
+    description: "The Drug Development Lifecycle Management System serves as a centralized platform to streamline and manage the complex processes involved in drug development, from discovery to post-approval safety monitoring",
+    technologies: ["Java", "Swing", "SQLite", "NetBeans"],
+    details: [
+      "Architected a full-stack Java application to streamline FDA-compliant drug development workflows, enabling real-time collaboration across 8+ roles (Research Scientists, Clinical Researchers, FDA Officers) and reducing manual tracking errors",
+      "Designed a role-based access control (RBAC) system using Java Swing for frontend dashboards and SQLite for secure data storage, ensuring compliance with regulatory standards (FDA, GLP)",
+      "Implemented modular Java backend with dedicated classes for drug composition tracking, inspection records, and automated report generation, improving data retrieval speed by 25%",
+      "Integrated real-time status updates via a centralized dashboard, allowing stakeholders to monitor drug approval stages (discovery, trials, inspections) and address bottlenecks proactively"
+    ],
+    liveDemoUrl: "",
+    githubUrl: "",
+    imageUrl: "/public/assets/Projects/ReguPharm.png"
+  },
+  {
     title: "ArcFit Fitness",
     category: "Software Development",
     description: "A responsive fitness website with BMI calculator and class scheduling",
