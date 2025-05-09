@@ -23,7 +23,7 @@ const experienceData: ExperienceItem[] = [
       "Designed a centralized data pipeline to track user behavior (click-through rates, session duration) using custom Node.js middleware, enabling data-driven UI/UX improvements that increased engagement by 15%",
       "Built a responsive portfolio platform with Next.js (SSR/ISR), Express.js APIs, and role-based admin dashboards, ensuring seamless cross-device functionality for visitor spikes"
     ],
-    tech: ["NextJS", "NodeJS", "ExpressJS", "TailwindCSS", "MaterialUI", "Redux", "AWS", "Docker", "Kubernates", "CI/CD", "SEO"]
+    tech: ["NextJS", "NodeJS", "ExpressJS", "TailwindCSS", "MaterialUI", "Redux", "AWS", "Docker", "Kubernetes", "CI/CD", "SEO"]
   },
   {
     company: "Maqure Ventures Pvt. Ltd.",
