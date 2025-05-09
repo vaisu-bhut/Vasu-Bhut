@@ -18,10 +18,12 @@ const experienceData: ExperienceItem[] = [
     period: "Aug 2023 - Jul 2024",
     location: "Jamnagar, India",
     description: [
-      "Designed and developed a portfolio website using the MERN stack for branding and showcasing offerings, ensuring seamless navigation and responsiveness across devices",
-      "Adopted best practices for Search Engine Optimization (SEO), improving search engine rankings and increasing customer traffic by 20%"
+      "Spearheaded SEO optimization by integrating schema markup, keyword-rich metadata, and accelerated mobile pages (AMP), boosting organic traffic by 20% and improving Google search rankings for 15+ service pages",
+      "Migrated legacy hosting to a serverless AWS stack using S3 for static assets, CloudFront for global CDN, and Lambda for backend APIs, reducing page load latency by 30%",
+      "Designed a centralized data pipeline to track user behavior (click-through rates, session duration) using custom Node.js middleware, enabling data-driven UI/UX improvements that increased engagement by 15%",
+      "Built a responsive portfolio platform with Next.js (SSR/ISR), Express.js APIs, and role-based admin dashboards, ensuring seamless cross-device functionality for visitor spikes"
     ],
-    tech: ["NextJS", "NodeJS", "ExpressJS", "TailwindCSS", "MaterialUI", "Redux", "AWS", "SEO"]
+    tech: ["NextJS", "NodeJS", "ExpressJS", "TailwindCSS", "MaterialUI", "Redux", "AWS", "Docker", "Kubernates", "CI/CD", "SEO"]
   },
   {
     company: "Maqure Ventures Pvt. Ltd.",
@@ -29,10 +31,12 @@ const experienceData: ExperienceItem[] = [
     period: "Aug 2022 - Dec 2022",
     location: "Ahmedabad, India",
     description: [
-      "Built and architected a reverse auction marketplace platform using the MERN stack, with functionalities like bidding, selling, and email notifications, reducing manual processing time by 25%",
-      "Implemented role-based login access, ensuring secure anonymous trade and maintaining data integrity, reducing potential data breaches by 30%"
+      "Architected a scalable marketplace enabling real-time bidding and anonymous transactions, processing 500+ daily bids with Node.js event-driven APIs and WebSocket integrations",
+      "Deployed fault-tolerant backend services on EC2 instances, leveraged DynamoDB for high-velocity bid data storage, and automated email/SMS notifications via AWS SQS, reducing manual processing time by 25%",
+      "Implemented JWT-based authentication with granular permissions (buyer, seller, admin), reducing unauthorized access incidents and ensuring robust data handling",
+      "Structured relational databases (MySQL) for user profiles, transaction histories, and bids tracking, optimizing query response times through indexing and normalization"
     ],
-    tech: ["ReactJS", "NodeJS", "TailwindCSS", "MaterialUI", "Redux", "AWS"]
+    tech: ["ReactJS", "NodeJS", "TailwindCSS", "MaterialUI", "MySQL", "Redux", "AWS"]
   },
   {
     company: "Techno IT Hub",
