@@ -82,7 +82,7 @@ const projectsData: Project[] = [
     ],
     liveDemoUrl: "https://connect.vasubhut.com",
     githubUrl: "",
-    imageUrl: "/public/assets/Projects/Conlieve.png"
+    imageUrl: "/assets/Projects/Conlieve.png"
   },
   {
     title: "Drug Development Lifecycle Management System (ReguPharm)",
@@ -97,7 +97,7 @@ const projectsData: Project[] = [
     ],
     liveDemoUrl: "",
     githubUrl: "",
-    imageUrl: "/public/assets/Projects/ReguPharm.png"
+    imageUrl: "/assets/Projects/ReguPharm.png"
   },
   {
     title: "ArcFit Fitness",
@@ -110,7 +110,7 @@ const projectsData: Project[] = [
     ],
     liveDemoUrl: "https://arcfit.vasubhut.com",
     githubUrl: "https://github.com/vaisu-bhut/ArcFit",
-    imageUrl: "/public/assets/Projects/ArcFit.png"
+    imageUrl: "/assets/Projects/ArcFit.png"
   },
   {
     title: "UberOla – Car Rental Booking",
@@ -123,7 +123,7 @@ const projectsData: Project[] = [
     ],
     liveDemoUrl: "https://uberola.vasubhut.com",
     githubUrl: "https://github.com/vaisu-bhut/UberOla",
-    imageUrl: "/public/assets/Projects/UberOla.png"
+    imageUrl: "/assets/Projects/UberOla.png"
   },
   {
     title: "OpenAI Article Summarizer",
@@ -136,7 +136,7 @@ const projectsData: Project[] = [
     ],
     liveDemoUrl: "https://theai.vasubhut.com",
     githubUrl: "https://github.com/vaisu-bhut/Theai",
-    imageUrl: "/public/assets/Projects/TheAI.png"
+    imageUrl: "/assets/Projects/TheAI.png"
   },
   {
     title: "Texty – Text Converter & Analyzer",
@@ -149,7 +149,7 @@ const projectsData: Project[] = [
     ],
     liveDemoUrl: "https://texty.vasubhut.com",
     githubUrl: "https://github.com/vaisu-bhut/Texty",
-    imageUrl: "/public/assets/Projects/Texty.png"
+    imageUrl: "/assets/Projects/Texty.png"
   },
   {
     title: "JustYours E-Commerce Store",
@@ -162,7 +162,7 @@ const projectsData: Project[] = [
     ],
     liveDemoUrl: "https://justyours.vasubhut.com",
     githubUrl: "https://github.com/vaisu-bhut/JustYours",
-    imageUrl: "/public/assets/Projects/JustYours.png"
+    imageUrl: "/assets/Projects/JustYours.png"
   },
   {
     title: "SnakeMania",
@@ -175,7 +175,7 @@ const projectsData: Project[] = [
     ],
     liveDemoUrl: "https://snakemania.vasubhut.com",
     githubUrl: "https://github.com/vaisu-bhut/SnakeMania",
-    imageUrl: "/public/assets/Projects/SnakeMania.png"
+    imageUrl: "/assets/Projects/SnakeMania.png"
   },
   {
     title: "TheRichMindset Blog",
@@ -188,7 +188,7 @@ const projectsData: Project[] = [
     ],
     liveDemoUrl: "https://therichmindset.vasubhut.com",
     githubUrl: "https://github.com/vaisu-bhut/TheRichMindset",
-    imageUrl: "/public/assets/Projects/TheRichMindset.png"
+    imageUrl: "/assets/Projects/TheRichMindset.png"
   }
 ];
 
