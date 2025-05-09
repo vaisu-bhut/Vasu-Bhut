@@ -80,6 +80,8 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Git/GitHub", logo: "/assets/Tools/Tools/git.svg" },
       { name: "Docker", logo: "/assets/Tools/Tools/docker.svg" },
+      { name: "Kubernates", logo: "/assets/Tools/Tools/Kubernetes.svg" },
+      { name: "CI/CD", logo: "/assets/Tools/Tools/CiCd.png" },
       { name: "AWS S3", logo: "/assets/Tools/Tools/s3.svg" },
       { name: "AWS EC2", logo: "/assets/Tools/Tools/ec2.svg" },
       { name: "AWS CloudFront", logo: "/assets/Tools/Tools/cloudfront.svg" },
