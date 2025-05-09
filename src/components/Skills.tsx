@@ -54,6 +54,7 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "MongoDB", logo: "/assets/Tools/Database/MongoDB.svg" },
       { name: "MySQL", logo: "/assets/Tools/Database/MySQL.svg" },
+      { name: "SQLite", logo: "/assets/Tools/Database/SQLite.svg" },
       { name: "PostgreSQL", logo: "/assets/Tools/Database/PostGreSQL.svg" },
       { name: "DynamoDB", logo: "/assets/Tools/Database/DynamoDB.svg" }
     ]
