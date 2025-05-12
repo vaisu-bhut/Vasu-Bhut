@@ -73,7 +73,7 @@ const projectsData: Project[] = [
   {
     title: "Conlieve - Network Management Companion",
     category: "Software Development",
-    description: "A responsive fitness website with BMI calculator and class scheduling",
+    description: "A platform that optimizes, priorities and specializes Network",
     technologies: ["React.js", "Tailwind CSS", "Node.js", "Express", "MongoDB", "AWS (S3, CloudFront, Lambda, API Gateway)"],
     details: [
       "Deployed as a Progressive Web App (PWA) using AWS S3 for static hosting, CloudFront for global CDN distribution, and Lambda/API Gateway for backend scalability, ensuring consistency via MongoDB",
