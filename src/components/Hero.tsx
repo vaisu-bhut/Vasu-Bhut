@@ -79,7 +79,7 @@ const Hero = () => {
                 Boston-based full-stack developer and Northeastern MSIS student;
               </span>
               <span className="block">
-                Skilled in MERN, Python, cloud, and big-data tooling;
+                Skilled in Data Science, LLM's, Cloud, and Big-Data tooling;
               </span>
               <span className="block">
                 Builds secure, scalable products with rigorous CI/CD;
