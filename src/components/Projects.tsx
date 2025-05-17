@@ -35,7 +35,7 @@ const projectsData: Project[] = [
     title: "AI-Powered Web Scraper",
     category: "Data Engineering",
     description: "A web scraping API with FastAPI and Playwright that extracts structured content from any URL.",
-    technologies: ["Python", "FastAPI", "Playwright", "BeautifulSoup", "WebSockets", "Pydantic"],
+    technologies: ["Python", "FastAPI", "BeautifulSoup", "WebSockets", "lxml"],
     details: [
       "Developed a web scraping API with FastAPI and Playwright, extracting structured content from any public URL",
       "Support for recursive crawling and JavaScript rendering",
