@@ -36,9 +36,7 @@ const skillCategories: SkillCategory[] = [
       { name: "Shadcn UI", logo: "/assets/Tools/Frontend/shadcn.png" },
       { name: "Radix UI", logo: "/assets/Tools/Frontend/radix.png" },
       { name: "Bootstrap", logo: "/assets/Tools/Frontend/Bootstrap.svg" },
-      { name: "Redux", logo: "/assets/Tools/Frontend/Redux.svg" },
-      { name: "Playwright", logo: "/assets/Tools/Frontend/Playwright.svg" }
-
+      { name: "Redux", logo: "/assets/Tools/Frontend/Redux.svg" }
     ]
   },
   {
@@ -54,8 +52,7 @@ const skillCategories: SkillCategory[] = [
       { name: "MySQL", logo: "/assets/Tools/Backend/MySQL.svg" },
       { name: "SQLite", logo: "/assets/Tools/Backend/SQLite.svg" },
       { name: "PostgreSQL", logo: "/assets/Tools/Backend/PostGreSQL.svg" },
-      { name: "DynamoDB", logo: "/assets/Tools/Backend/DynamoDB.svg" },
-      { name: "Pydantic", logo: "/assets/Tools/Backend/Pydantic.png" }
+      { name: "DynamoDB", logo: "/assets/Tools/Backend/DynamoDB.svg" }
     ]
   },
   {
