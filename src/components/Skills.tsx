@@ -36,7 +36,10 @@ const skillCategories: SkillCategory[] = [
       { name: "Shadcn UI", logo: "/assets/Tools/Frontend/shadcn.png" },
       { name: "Radix UI", logo: "/assets/Tools/Frontend/radix.png" },
       { name: "Bootstrap", logo: "/assets/Tools/Frontend/Bootstrap.svg" },
-      { name: "Redux", logo: "/assets/Tools/Frontend/Redux.svg" }
+      { name: "Postman", logo: "/assets/Tools/Frontend/Postman.svg" },
+      { name: "Jira", logo: "/assets/Tools/Frontend/Jira.svg" },
+      { name: "Jest", logo: "/assets/Tools/Frontend/Jest.svg" },
+      { name: "Cypress", logo: "/assets/Tools/Frontend/Cypress.svg" }
     ]
   },
   {
