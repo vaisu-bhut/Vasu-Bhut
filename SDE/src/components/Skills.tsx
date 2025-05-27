@@ -18,7 +18,8 @@ const skillCategories: SkillCategory[] = [
       { name: "Python", logo: "/assets/Tools/Programming/Python.svg" },
       { name: "JavaScript", logo: "/assets/Tools/Programming/Javascript.svg" },
       { name: "TypeScript", logo: "/assets/Tools/Programming/Typescript.svg" },
-      { name: "SQL", logo: "/assets/Tools/Programming/SQL.svg" }
+      { name: "SQL", logo: "/assets/Tools/Programming/SQL.svg" },
+      { name: "C++", logo: "/assets/Tools/Programming/C++.svg" }
     ]
   },
   {
