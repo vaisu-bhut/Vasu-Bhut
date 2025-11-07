@@ -72,7 +72,7 @@ const skillCategories: SkillCategory[] = [
       { name: "AWS Cloudwatch", logo: "/assets/Tools/Tools/Cloudwatch.svg" },
       { name: "Equivalent GCP Services", logo: "/assets/Tools/Tools/GCP.svg" },
       { name: "Docker", logo: "/assets/Tools/Tools/docker.svg" },
-      // { name: "Kubernates", logo: "/assets/Tools/Tools/Kubernetes.svg" },
+      { name: "Kubernates", logo: "/assets/Tools/Tools/Kubernetes.svg" },
       { name: "CI/CD", logo: "/assets/Tools/Tools/CiCd.png" },
       { name: "GitHub Actions", logo: "/assets/Tools/Tools/Github.png" },
       { name: "Vercel", logo: "/assets/Tools/Tools/vercel.png" },

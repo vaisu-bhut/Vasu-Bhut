@@ -17,6 +17,7 @@ interface Project {
   liveDemoUrl?: string;
   githubUrl?: string;
   imageUrl?: string;
+  playStoreUrl?: string;
 }
 
 const projectsData: Project[] = [
@@ -34,6 +35,7 @@ const projectsData: Project[] = [
       "Terraform",
       "GCP (Compute Engine, Load Balancer, VPC, Cloud DNS)",
       "Docker",
+      "Kubernetes",
       "TypeScript"
     ],
     details: [
@@ -43,7 +45,8 @@ const projectsData: Project[] = [
       "Developed production-ready REST API with JWT authentication, role-based access control, and MongoDB database architecture optimized for complex relationship queries and balance aggregations across multiple expenses"
     ],
     liveDemoUrl: "https://www.splitlyr.clestiq.com",
-    githubUrl: "https://github.com/vasubhut/splitlyr",
+    githubUrl: "https://github.com/vaisu-bhut/CoinBreakr",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.splitlyr",
     imageUrl: "/assets/Projects/Splitlyr.png",
   },
   {
@@ -70,7 +73,7 @@ const projectsData: Project[] = [
     ],
     liveDemoUrl: "https://dataalchemist.clestiq.com",
     githubUrl: "https://github.com/vasubhut/dataalchemist",
-    imageUrl: "/assets/Projects/DataAlchemist.png",
+    imageUrl: "",
   },
   {
     title: "Conlieve - Network Management Companion",
@@ -296,6 +299,7 @@ const projectsData: Project[] = [
       "Designed an interactive user experience enabling profile management and real-time health guidance",
     ],
     githubUrl: "https://github.com/vaisu-bhut/Health-Assistant",
+    liveDemoUrl: "https://github.com/vaisu-bhut/Health-Assistant/blob/main/HealthAssistant_Code/Team5_Health_Assistant.ipynb",
   },
 ];
 
@@ -391,28 +395,31 @@ const Projects = () => {
               transition={{ delay: idx * 0.1 }}
               className="bg-muted/30 rounded-xl border border-border overflow-hidden card-hover"
             >
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {/* Image Preview */}
-                <div className="relative h-auto md:h-full overflow-hidden">
-                  <img
-                    src={project.imageUrl}
-                    alt={project.title}
-                    className="w-full h-full object-contain transition-transform duration-700 hover:scale-110"
-                  />
-                </div>
+              <div className={`grid grid-cols-1 ${project.imageUrl ? 'md:grid-cols-3' : ''} gap-4`}>
+                {/* Image Preview - only show if imageUrl exists */}
+                {project.imageUrl && (
+                  <div className="relative h-auto md:h-full overflow-hidden">
+                    <img
+                      src={project.imageUrl}
+                      alt={project.title}
+                      className="w-full h-full object-contain transition-transform duration-700 hover:scale-110"
+                    />
+                  </div>
+                )}
 
                 {/* Project Info */}
-                <div className="p-6 md:col-span-2">
+                <div className={`p-6 ${project.imageUrl ? 'md:col-span-2' : ''}`}>
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                   <p className="text-muted-foreground mb-4">
                     {project.description}
                   </p>
 
-                  <div className="mb-4">
+                  <div className="mb-4 space-y-2">
                     {project.details.map((detail, i) => (
-                      <p key={i} className="text-sm text-muted-foreground mb-2">
-                        {detail}
-                      </p>
+                      <div key={i} className="flex gap-2 text-sm text-muted-foreground">
+                        <span className="text-primary mt-1">•</span>
+                        <p>{detail}</p>
+                      </div>
                     ))}
                   </div>
 
@@ -426,7 +433,7 @@ const Projects = () => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-3 mt-4">
+                  <div className="flex flex-wrap gap-3 mt-4">
                     {project.liveDemoUrl && (
                       <a
                         href={project.liveDemoUrl}
@@ -435,6 +442,19 @@ const Projects = () => {
                         className="px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-md text-sm font-medium transition-colors"
                       >
                         Live Demo
+                      </a>
+                    )}
+                    {project.playStoreUrl && (
+                      <a
+                        href={project.playStoreUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 bg-green-600/10 hover:bg-green-600/20 text-green-600 rounded-md text-sm font-medium transition-colors flex items-center gap-2"
+                      >
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                        </svg>
+                        Play Store
                       </a>
                     )}
                     {project.githubUrl && (
