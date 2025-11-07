@@ -11,8 +11,7 @@ const Footer = () => {
               Vasu Bhut
             </a>
             <p className="text-sm text-muted-foreground mt-2 max-w-md">
-              Full Stack Developer specializing in modern Web Technologies,
-              Cloud Engineering, and DevOps Tools.
+              Software Engineer | Cloud & DevOps | ML/AI & Automation
             </p>
           </div>
           
@@ -45,7 +44,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-muted mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-muted mt-8 pt-8 flex flex-col md:flex-row justify-center items-center">
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Vasu Bhut. All rights reserved.
           </p>

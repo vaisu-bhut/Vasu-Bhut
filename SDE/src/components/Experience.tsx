@@ -14,25 +14,25 @@ interface ExperienceItem {
 const experienceData: ExperienceItem[] = [
   {
     company: "Xprime",
-    role: "Full Stack Software Developer",
+    role: "Software Engineer",
     period: "Aug 2023 - Jul 2024",
     location: "Jamnagar, India",
     description: [
-      "Spearheaded SEO optimization by integrating schema markup, keyword-rich metadata, and accelerated mobile pages (AMP), boosting organic traffic by 20% and improving Google search rankings for 15+ service pages",
-      "Migrated legacy hosting to a serverless AWS stack using S3 for static assets, CloudFront for global CDN, and Lambda for backend APIs, reducing page load latency by 30%",
-      "Designed a centralized data pipeline to track user behavior (click-through rates, session duration) using custom Node.js middleware, enabling data-driven UI/UX improvements that increased engagement by 15%",
-      "Built a responsive portfolio platform with Next.js (SSR/ISR), Express.js APIs, and role-based admin dashboards, ensuring seamless cross-device functionality for visitor spikes"
-    ],
-    tech: ["NextJS", "NodeJS", "ExpressJS", "TailwindCSS", "MaterialUI", "Redux", "AWS", "Docker", "Kubernetes", "CI/CD", "SEO"]
+  "Spearheaded SEO optimization by integrating schema markup, keyword-rich metadata, and accelerated mobile pages (AMP), boosting organic traffic by 20% and improving Google search rankings for 9 product pages",
+  "Migrated legacy hosting to a serverless AWS stack using S3 for static assets, CloudFront for global CDN, and Lambda for backend APIs, reducing page load latency by 30% and cost by nearly 70%",
+  "Integrated Google Analytics and Tag Manager to track user behavior metrics (click-through rates, session duration, conversion funnels), enabling data-driven UI/UX improvements that increased engagement by 65%",
+  "Built a responsive portfolio showcase platform with Next.js (SSR/ISR), Express.js APIs, and role-based admin dashboards, ensuring seamless cross-device functionality and optimal performance during traffic spikes"
+],
+tech: ["NextJS", "NodeJS", "ExpressJS", "TailwindCSS", "MaterialUI", "Redux", "AWS S3", "AWS CloudFront", "AWS Lambda", "Google Analytics", "Google Tag Manager", "SEO"]
   },
   {
     company: "Maqure Ventures Pvt. Ltd.",
-    role: "Full Stack Developer",
+    role: "Full Stack Developer Intern",
     period: "Aug 2022 - Dec 2022",
     location: "Ahmedabad, India",
     description: [
       "Architected a scalable marketplace enabling real-time bidding and anonymous transactions, processing 500+ daily bids with Node.js event-driven APIs and WebSocket integrations",
-      "Deployed fault-tolerant backend services on EC2 instances, leveraged DynamoDB for high-velocity bid data storage, and automated email/SMS notifications via AWS SQS, reducing manual processing time by 25%",
+      "Deployed fault-tolerant backend services on EC2 instances, leveraged DynamoDB for high-velocity bid data storage, and automated email notifications via Sendgrid, reducing manual processing time by 25%",
       "Implemented JWT-based authentication with granular permissions (buyer, seller, admin), reducing unauthorized access incidents and ensuring robust data handling",
       "Structured relational databases (MySQL) for user profiles, transaction histories, and bids tracking, optimizing query response times through indexing and normalization"
     ],
@@ -40,7 +40,7 @@ const experienceData: ExperienceItem[] = [
   },
   {
     company: "Techno IT Hub",
-    role: "Frontend Web Developer",
+    role: "Frontend Web Developer Intern",
     period: "Jan 2022 - June 2022",
     location: "Ahmedabad, India",
     description: [
@@ -52,22 +52,46 @@ const experienceData: ExperienceItem[] = [
   {
     company: "Inventrom Private Limited - Bolt IoT",
     role: "Web App Developer Intern",
-    period: "Nov 2021 - Dec 2021",
+    period: "Oct 2021 - Dec 2021",
     location: "Bengaluru, India",
     description: [
       "Designed and developed a single-page website for Inventrom, featuring a navigation bar, background image with text, About Us section, Awards section, contact form, and footer, with smooth internal linking and responsive design across devices",
-      "Integrated HubSpot form functionality for user inquiries, enhancing interactivity, and implemented dynamic content features, adhering to project guidelines and web development best practices"
+      "Implemented dynamic content features and interactive form functionality for user inquiries, following web development best practices and maintaining consistent design patterns throughout the application"
     ],
-    tech: ["HTML", "CSS", "JavaScript", "HubSpot API"]
+    tech: ["HTML", "CSS", "JavaScript"]
   }
 ];
 
 const Experience = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isSectionInView, setIsSectionInView] = useState(false);
   const timelineItemsRef = useRef<(HTMLDivElement | null)[]>([]);
   const sectionRef = useRef<HTMLElement>(null);
   const rightPanelRef = useRef<HTMLDivElement>(null);
   
+  // Observe when section enters viewport
+  useEffect(() => {
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          setIsSectionInView(entry.isIntersecting);
+        });
+      },
+      { threshold: 0.1 } // Activate as soon as 10% of section is visible
+    );
+    
+    if (sectionRef.current) {
+      sectionObserver.observe(sectionRef.current);
+    }
+    
+    return () => {
+      if (sectionRef.current) {
+        sectionObserver.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  // Observe timeline items for active state
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -94,16 +118,17 @@ const Experience = () => {
     };
   }, []);
 
-  // Handle scroll behavior to ensure full experience section is viewed before scrolling to next section
+  // Handle scroll behavior to ensure experience items scroll independently
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
-      if (!sectionRef.current || !rightPanelRef.current) return;
+      if (!isSectionInView || !rightPanelRef.current) return;
       
       const { scrollTop, scrollHeight, clientHeight } = rightPanelRef.current;
-      const isAtBottom = scrollHeight - scrollTop <= clientHeight + 5; // Small threshold for browser differences
+      const isAtTop = scrollTop === 0;
+      const isAtBottom = scrollHeight - scrollTop <= clientHeight + 1;
       
-      if (e.deltaY > 0 && !isAtBottom) {
-        // Scrolling down and not at bottom of experience items
+      // Prevent page scroll and scroll the experience items instead
+      if ((e.deltaY > 0 && !isAtBottom) || (e.deltaY < 0 && !isAtTop)) {
         e.preventDefault();
         rightPanelRef.current.scrollTop += e.deltaY;
       }
@@ -119,13 +144,13 @@ const Experience = () => {
         section.removeEventListener('wheel', handleWheel);
       }
     };
-  }, []);
+  }, [isSectionInView]);
   
   return (
-    <section id="experience" ref={sectionRef} className="page-section bg-background relative overflow-hidden">
+    <section id="experience" ref={sectionRef} className="page-section bg-background relative overflow-hidden flex items-center">
       <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-background to-transparent pointer-events-none z-10"></div>
       
-      <div className="section-container relative">
+      <div className="section-container relative w-full">
         <div className="flex flex-col md:flex-row items-start gap-10 md:gap-20">
           <div className="md:sticky top-24 md:w-1/3 mb-10 md:mb-0">
             <h2 className="section-title">Work Experience</h2>

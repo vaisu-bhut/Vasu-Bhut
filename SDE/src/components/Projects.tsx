@@ -1,20 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Github } from "lucide-react";
 
 type ProjectCategory =
-  | "All"
-  | "MERN Stack"
-  | "Java Swing"
-  | "Basic Web Development";
+  | "Software Development"
+  | "DS & ML"
+  | "AI/LLM & Automation";
 
 interface Project {
   title: string;
   description: string;
   technologies: string[];
   details: string[];
-  category: ProjectCategory | "All";
+  category: ProjectCategory | "Software Development";
   liveDemoUrl?: string;
   githubUrl?: string;
   imageUrl?: string;
@@ -22,8 +21,60 @@ interface Project {
 
 const projectsData: Project[] = [
   {
+    title: "Splitlyr - Expense Sharing Platform",
+    category: "Software Development",
+    description:
+      "A mobile-first expense splitting app that helps friends and groups track shared costs, automatically calculate who owes whom, and settle balances seamlessly",
+    technologies: [
+      "React Native",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Terraform",
+      "GCP (Compute Engine, Load Balancer, VPC, Cloud DNS)",
+      "Docker",
+      "TypeScript"
+    ],
+    details: [
+      "Built cross-platform mobile app (iOS/Android) enabling users to create expense groups, split bills with custom ratios, track settlements, and manage friend networks with real-time balance calculations",
+      "Implemented offline-capable expense tracking with automatic sync, contact integration for easy friend addition, and intelligent expense splitting algorithms for equal, percentage-based, and custom splits",
+      "Engineered auto-scaling GCP infrastructure using Terraform IaC with CPU-based instance groups (2-10 VMs), global HTTPS load balancer with managed SSL certificates, and VPC networking for high availability",
+      "Developed production-ready REST API with JWT authentication, role-based access control, and MongoDB database architecture optimized for complex relationship queries and balance aggregations across multiple expenses"
+    ],
+    liveDemoUrl: "https://www.splitlyr.clestiq.com",
+    githubUrl: "https://github.com/vasubhut/splitlyr",
+    imageUrl: "/assets/Projects/Splitlyr.png",
+  },
+  {
+    title: "DataAlchemist - AI-Powered Data Cleaning Platform",
+    category: "AI/LLM & Automation",
+    description:
+      "An intelligent support platform that cleans messy datasets, discovers hidden relationships in data, and automatically resolves support tickets using AI-powered chat interface",
+    technologies: [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Neo4j",
+      "Terraform",
+      "GCP (Cloud Run, Vertex AI, Cloud Monitoring)",
+      "Docker",
+      "RAG Architecture",
+      "LLM Integration"
+    ],
+    details: [
+      "Created AI chat interface that analyzes uploaded datasets, automatically detects and fixes data quality issues (duplicates, missing values, inconsistencies), and suggests optimal data transformations",
+      "Built relationship discovery engine using Neo4j graph database to map connections between data entities, visualize complex relationships, and uncover hidden patterns across datasets",
+      "Implemented RAG-based support system that searches historical tickets and chat logs to find similar issues, generates contextual responses using LLM, and escalates to human agents when confidence is low",
+      "Engineered hybrid cloud infrastructure on GCP with Terraform managing Cloud Run serverless deployment, Vertex AI embeddings for semantic search, and automated CI/CD pipeline for zero-downtime deployments"
+    ],
+    liveDemoUrl: "https://dataalchemist.clestiq.com",
+    githubUrl: "https://github.com/vasubhut/dataalchemist",
+    imageUrl: "/assets/Projects/DataAlchemist.png",
+  },
+  {
     title: "Conlieve - Network Management Companion",
-    category: "MERN Stack",
+    category: "Software Development",
     description:
       "A platform that optimizes, priorities and specializes Network",
     technologies: [
@@ -45,24 +96,8 @@ const projectsData: Project[] = [
     imageUrl: "/assets/Projects/Conlieve.png",
   },
   {
-    title: "Drug Development Lifecycle Management System (ReguPharm)",
-    category: "Java Swing",
-    description:
-      "The Drug Development Lifecycle Management System serves as a centralized platform to streamline and manage the complex processes from discovery to approval",
-    technologies: ["Java", "Swing", "SQLite", "NetBeans"],
-    details: [
-      "Architected a full-stack Java application to streamline FDA-compliant drug development workflows, enabling real-time collaboration across 8+ roles (Research Scientists, Clinical Researchers, FDA Officers) and reducing manual tracking errors",
-      "Designed a role-based access control (RBAC) system using Java Swing for frontend dashboards and SQLite for secure data storage, ensuring compliance with regulatory standards (FDA, GLP)",
-      "Implemented modular Java backend with dedicated classes for drug composition tracking, inspection records, and automated report generation, improving data retrieval speed by 25%",
-      "Integrated real-time status updates via a centralized dashboard, allowing stakeholders to monitor drug approval stages (discovery, trials, inspections) and address bottlenecks proactively",
-    ],
-    liveDemoUrl: "",
-    githubUrl: "",
-    imageUrl: "/assets/Projects/ReguPharm.png",
-  },
-  {
     title: "ArcFit Fitness",
-    category: "MERN Stack",
+    category: "Software Development",
     description:
       "A responsive fitness website with BMI calculator and class scheduling",
     technologies: [
@@ -82,7 +117,7 @@ const projectsData: Project[] = [
   },
   {
     title: "UberOla – Car Rental Booking",
-    category: "MERN Stack",
+    category: "Software Development",
     description: "A full-stack MERN car rental booking platform",
     technologies: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
     details: [
@@ -94,8 +129,24 @@ const projectsData: Project[] = [
     imageUrl: "/assets/Projects/UberOla.png",
   },
   {
+    title: "Drug Development Lifecycle Management System (ReguPharm)",
+    category: "Software Development",
+    description:
+      "The Drug Development Lifecycle Management System serves as a centralized platform to streamline and manage the complex processes from discovery to approval",
+    technologies: ["Java", "Swing", "SQLite", "NetBeans"],
+    details: [
+      "Architected a full-stack Java application to streamline FDA-compliant drug development workflows, enabling real-time collaboration across 8+ roles (Research Scientists, Clinical Researchers, FDA Officers) and reducing manual tracking errors",
+      "Designed a role-based access control (RBAC) system using Java Swing for frontend dashboards and SQLite for secure data storage, ensuring compliance with regulatory standards (FDA, GLP)",
+      "Implemented modular Java backend with dedicated classes for drug composition tracking, inspection records, and automated report generation, improving data retrieval speed by 25%",
+      "Integrated real-time status updates via a centralized dashboard, allowing stakeholders to monitor drug approval stages (discovery, trials, inspections) and address bottlenecks proactively",
+    ],
+    liveDemoUrl: "",
+    githubUrl: "",
+    imageUrl: "/assets/Projects/ReguPharm.png",
+  },
+  {
     title: "OpenAI Article Summarizer",
-    category: "MERN Stack",
+    category: "Software Development",
     description: "Web app that summarizes articles using AI",
     technologies: ["React", "Redux Toolkit", "Tailwind CSS", "RapidAPI"],
     details: [
@@ -108,7 +159,7 @@ const projectsData: Project[] = [
   },
   {
     title: "Texty – Text Converter & Analyzer",
-    category: "Basic Web Development",
+    category: "Software Development",
     description: "Text utility app with real-time metrics and transformations",
     technologies: ["React 17", "JavaScript", "Bootstrap 5", "HTML5/CSS3"],
     details: [
@@ -121,7 +172,7 @@ const projectsData: Project[] = [
   },
   {
     title: "JustYours E-Commerce Store",
-    category: "MERN Stack",
+    category: "Software Development",
     description: "E-commerce platform with category-based browsing",
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "CSS"],
     details: [
@@ -134,7 +185,7 @@ const projectsData: Project[] = [
   },
   {
     title: "SnakeMania",
-    category: "Basic Web Development",
+    category: "Software Development",
     description: "Browser-based Snake game with audio effects",
     technologies: ["HTML5", "CSS3", "JavaScript", "HTML5 Audio API"],
     details: [
@@ -147,7 +198,7 @@ const projectsData: Project[] = [
   },
   {
     title: "TheRichMindset Blog",
-    category: "Basic Web Development",
+    category: "Software Development",
     description: "Responsive multi-page self-improvement blog",
     technologies: [
       "HTML5",
@@ -163,6 +214,88 @@ const projectsData: Project[] = [
     liveDemoUrl: "https://therichmindset.vasubhut.com",
     githubUrl: "https://github.com/vaisu-bhut/TheRichMindset",
     imageUrl: "/assets/Projects/TheRichMindset.png",
+  },
+  {
+    title: "Loan Approval Prediction",
+    category: "DS & ML",
+    description:
+      "A machine learning model for predicting loan approvals with high accuracy.",
+    technologies: [
+      "Python",
+      "Scikit-learn",
+      "XGBoost",
+      "Pandas",
+      "NumPy",
+      "Feature Engineering",
+      "Hyperparameter Tuning",
+      "Cross-Validation",
+    ],
+    details: [
+      "Built a loan approval predictor using synthetic financial data, achieving ROC-AUC = 0.96037 (currently top on Kaggle leaderboard)",
+      "Feature engineering techniques like debt-to-income ratio calculation and XGBoost tuned with RandomizedSearchCV",
+      "Addressed synthetic data challenges by cross-validating with the original dataset, ensuring robustness against distribution shifts",
+      "Deployed Scikit-learn pipelines for reproducible preprocessing",
+    ],
+    githubUrl: "https://github.com/vaisu-bhut/Loan-Prediction",
+  },
+  {
+    title: "AI-Powered Web Scraper",
+    category: "DS & ML",
+    description:
+      "A web scraping API with FastAPI and Playwright that extracts structured content from any URL.",
+    technologies: ["Python", "FastAPI", "WebSockets", "lxml"],
+    details: [
+      "Developed a web scraping API with FastAPI and Playwright, extracting structured content from any public URL",
+      "Support for recursive crawling and JavaScript rendering",
+      "Implemented real-time data streaming via WebSockets",
+      "Built a user-friendly frontend interface for non-technical users",
+    ],
+    githubUrl: "https://github.com/vaisu-bhut/Project-Information",
+  },
+  {
+    title: "Podcast Listening Analysis",
+    category: "DS & ML",
+    description:
+      "A scalable data pipeline for predicting podcast listening duration with advanced analytics.",
+    technologies: [
+      "Python",
+      "Apache Spark",
+      "Scikit-learn",
+      "XGBoost",
+      "Apache Airflow",
+      "Ploty",
+      "Docker",
+      "Parquet",
+    ],
+    details: [
+      "Built a scalable data pipeline using PySpark and Spark-XGBoost to predict podcast listening duration",
+      "Advanced feature engineering including sentiment scores and ad density analysis",
+      "Containerized workflow with Docker and orchestrated via Apache Airflow",
+      "Enabled reproducible, one-command execution on local machines without cloud dependencies",
+    ],
+    githubUrl: "https://github.com/vaisu-bhut/Podcast-Listening-Analysis",
+  },
+  {
+    title: "AI-Powered Personalized Health Assistant",
+    category: "AI/LLM & Automation",
+    description:
+      "An AI-driven health assistant that provides personalized fitness and nutrition recommendations.",
+    technologies: [
+      "Python",
+      "OpenAI API",
+      "LangChain",
+      "LangGraph",
+      "Streamlit",
+      "Pandas",
+      "NumPy",
+    ],
+    details: [
+      "Engineered an AI-driven health assistant using fine-tuned GPT-3.5-Turbo",
+      "Utilized LangChain/LangGraph workflows for personalized recommendations",
+      "Enhanced security with a custom PromptDefender class, achieving 91% success rate in blocking prompt injection attacks",
+      "Designed an interactive user experience enabling profile management and real-time health guidance",
+    ],
+    githubUrl: "https://github.com/vaisu-bhut/Health-Assistant",
   },
 ];
 
@@ -187,19 +320,31 @@ const itemVariants = {
 };
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState<ProjectCategory>("All");
+  const [activeTab, setActiveTab] = useState<ProjectCategory>("Software Development");
   const [showAll, setShowAll] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if mobile on mount and window resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Filter projects based on active tab
-  const filteredProjects =
-    activeTab === "All"
-      ? projectsData
-      : projectsData.filter((project) => project.category === activeTab);
+  const filteredProjects = projectsData.filter((project) => project.category === activeTab);
 
-  // Determine how many projects to show based on showAll state
+  // Determine how many projects to show based on screen size and showAll state
+  const defaultProjectCount = isMobile ? 2 : 4;
+  
   const projectsToShow = showAll
     ? filteredProjects
-    : filteredProjects.slice(0, 4);
+    : filteredProjects.slice(0, defaultProjectCount);
 
   return (
     <section
@@ -214,10 +359,9 @@ const Projects = () => {
         {/* Project tabs - updated design */}
         <div className="bg-muted/30 py-2 px-3 rounded-xl flex flex-wrap mb-8">
           {([
-            "All",
-            "MERN Stack",
-            "Java Swing",
-            "Basic Web Development",
+            "Software Development",
+            "DS & ML",
+            "AI/LLM & Automation",
           ] as ProjectCategory[]).map((category) => (
             <button
               key={category}
@@ -253,14 +397,8 @@ const Projects = () => {
                   <img
                     src={project.imageUrl}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                    className="w-full h-full object-contain transition-transform duration-700 hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-4">
-                    <span className="bg-primary/80 text-primary-foreground text-xs px-2 py-1 rounded">
-                      {project.category}
-                    </span>
-                  </div>
                 </div>
 
                 {/* Project Info */}
@@ -318,7 +456,7 @@ const Projects = () => {
         </div>
 
         {/* View More / View Less Button - animated */}
-        {filteredProjects.length > 4 && (
+        {filteredProjects.length > defaultProjectCount && (
           <motion.div
             className="flex justify-center mt-12"
             initial={{ opacity: 0, y: 20 }}
@@ -343,9 +481,8 @@ const Projects = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className={`transition-transform duration-300 ${
-                    showAll ? "rotate-180" : ""
-                  }`}
+                  className={`transition-transform duration-300 ${showAll ? "rotate-180" : ""
+                    }`}
                 >
                   <path d="m6 9 6 6 6-6" />
                 </svg>

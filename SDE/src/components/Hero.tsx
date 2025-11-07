@@ -1,11 +1,52 @@
-import { useEffect, useRef } from "react";
-import { cn } from "@/lib/utils";
-import AnimatedCube from "./AnimatedCube";
+import { useEffect, useRef, useState } from "react";
 import { Github, Mail, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 
+type RoleType = "SDE" | "Cloud" | "LLM";
+
+interface RoleContent {
+  title: string;
+  badge: string;
+  lines: string[];
+}
+
+const roleContents: Record<RoleType, RoleContent> = {
+  SDE: {
+    title: "Software Development Engineer",
+    badge: "Software Development Engineer",
+    lines: [
+      "🚀 Boston-based software engineer crafting scalable full-stack applications with React Native, Next.js, and Node.js;",
+      "📈 Led end-to-end development of performance-driven platforms, improving organic traffic by 20% through SEO optimization and responsive design;",
+      "🔐 Architected secure RESTful APIs with JWT authentication, role-based access control, input validation middleware, and rate limiting for brute force protection;",
+      "🏸 Off-duty: smashing shuttlecocks and climbing Clash Royale leaderboards;",
+    ],
+  },
+  Cloud: {
+    title: "DevOps/Cloud Engineer",
+    badge: "DevOps/Cloud Engineer",
+    lines: [
+      "☁️ Engineered auto-scaling cloud infrastructure using Terraform IaC across GCP and AWS with global load balancers and managed SSL certificates;",
+      "⚡ Migrated legacy systems to AWS serverless architecture (S3, CloudFront, Lambda), reducing latency by 30% and cutting operational costs by 70%;",
+      "🔄 Built multi-environment CI/CD pipelines with GitHub Actions for zero-downtime deployments, automated healing, and comprehensive health monitoring;",
+      "🛡️ Designed production-grade VPC networking with public/private subnets, security controls, rate limiting, and structured observability;",
+    ],
+  },
+  LLM: {
+    title: "LLM/ML Engineer",
+    badge: "LLM/ML Engineer",
+    lines: [
+      "🤖 Architected production RAG systems combining Vertex AI embeddings, Neo4j knowledge graphs, and LLM orchestration for enterprise automation;",
+      "🎯 Fine-tuned GPT-3.5-Turbo with advanced prompt engineering (zero-shot, few-shot, CoT), improving domain response quality by 40%;",
+      "🧠 Developed agentic AI workflows using LangGraph and Google Agent Development Kit with multi-step reasoning and confidence-based escalation;",
+      "🔬 Built end-to-end ML infrastructure with vector search, semantic retrieval, real-time inference via auto-scaling Cloud Run, and evaluation frameworks;",
+    ],
+  },
+};
+
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [activeRole, setActiveRole] = useState<RoleType>("SDE");
+  const roles: RoleType[] = ["SDE", "Cloud", "LLM"];
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -22,9 +63,8 @@ const Hero = () => {
         const speed = parseFloat(element.getAttribute("data-speed") || "0");
         const offsetX = x * speed;
         const offsetY = y * speed;
-        element.style.transform = `translate3d(${offsetX * 30}px, ${
-          offsetY * 30
-        }px, 0)`;
+        element.style.transform = `translate3d(${offsetX * 30}px, ${offsetY * 30
+          }px, 0)`;
       });
     };
 
@@ -32,6 +72,19 @@ const Hero = () => {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
+  }, []);
+
+  // Auto-rotate roles every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveRole((current) => {
+        const currentIndex = roles.indexOf(current);
+        const nextIndex = (currentIndex + 1) % roles.length;
+        return roles[nextIndex];
+      });
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -46,18 +99,22 @@ const Hero = () => {
       <div className="absolute bottom-[-30%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-gradient-to-tr from-accent/5 to-primary/5 blur-3xl"></div>
 
       <div className="container mx-auto px-6 md:py-32 relative z-10">
-        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-          <div className="md:w-3/5 animate-fade-in">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+          <div className="w-full md:w-3/5 animate-fade-in">
             <div className="mb-3 flex flex-wrap gap-2">
-              <span className="inline-block py-1 px-3 rounded-full text-xs font-medium bg-primary/10 text-primary animate-pulse-slow">
-                Software Developer
-              </span>
-              <span
-                className="inline-block py-1 px-3 rounded-full text-xs font-medium bg-secondary/10 text-secondary animate-pulse-slow"
-                style={{ animationDelay: "1s" }}
-              >
-                Cloud Engineer
-              </span>
+              {roles.map((role) => (
+                <button
+                  key={role}
+                  onClick={() => setActiveRole(role)}
+                  className={`inline-block py-1 px-3 rounded-full text-xs font-medium transition-all duration-300 cursor-pointer hover:scale-105 ${
+                    activeRole === role
+                      ? "bg-primary/20 text-primary ring-2 ring-primary/50"
+                      : "bg-muted/50 text-muted-foreground hover:bg-muted"
+                  }`}
+                >
+                  {roleContents[role].badge}
+                </button>
+              ))}
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -65,23 +122,21 @@ const Hero = () => {
               <span className="gradient-text">Vasu Bhut</span>
             </h1>
 
-            <p
-              className="text-lg md:text-xxl text-muted-foreground mb-8 max-w-xxl parallax-element"
+            <motion.div
+              key={activeRole}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="text-lg md:text-xxl text-muted-foreground mb-8 parallax-element"
               data-speed="0.5"
             >
-              <span className="block">
-                Boston-based full-stack developer and Northeastern MSIS student;
-              </span>
-              <span className="block">
-              Skilled in React/Next.js, Node.js, AWS, and cloud-native development;
-              </span>
-              <span className="block">
-                Builds secure, scalable products with rigorous CI/CD pipelines;
-              </span>
-              <span className="block">
-                Recharges on the badminton court and in Clash Royale Arena;
-              </span>
-            </p>
+              {roleContents[activeRole].lines.map((line, index) => (
+                <span key={index} className="block">
+                  {line}
+                </span>
+              ))}
+            </motion.div>
 
             <div className="flex gap-4 items-center mb-8">
               <a
@@ -128,7 +183,7 @@ const Hero = () => {
           </div>
 
           <div
-            className="relative md:w-2/5 flex justify-center parallax-element"
+            className="relative md:w-2/5 hidden md:flex justify-center parallax-element"
             data-speed="-0.8"
           >
             {/* animated gradient blob */}
