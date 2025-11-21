@@ -72,7 +72,7 @@ const projectsData: Project[] = [
       "Engineered hybrid cloud infrastructure on GCP with Terraform managing Cloud Run serverless deployment, Vertex AI embeddings for semantic search, and automated CI/CD pipeline for zero-downtime deployments"
     ],
     liveDemoUrl: "https://dataalchemist.clestiq.com",
-    githubUrl: "https://github.com/vasubhut/dataalchemist",
+    githubUrl: "https://github.com/vaisu-bhut/dataalchemist",
     imageUrl: "",
   },
   {
