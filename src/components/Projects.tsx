@@ -46,7 +46,7 @@ const projectsData: Project[] = [
     ],
     liveDemoUrl: "https://www.splitlyr.clestiq.com",
     githubUrl: "https://github.com/vaisu-bhut/CoinBreakr",
-    playStoreUrl: "https://play.google.com/store/apps/details?id=com.splitlyr",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.clestiq.splitlyr.app",
     imageUrl: "/assets/Projects/Splitlyr.png",
   },
   {
