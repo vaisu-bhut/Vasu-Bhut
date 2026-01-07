@@ -22,6 +22,36 @@ interface Project {
 
 const projectsData: Project[] = [
   {
+    title: "Clestiq Shield - AI Security Gateway Platform",
+    category: "AI/ML & Cloud Infrastructure",
+    description:
+      "An enterprise security gateway that protects LLM applications from prompt injection, data leakage, and hallucinations—risks that direct SDK calls cannot prevent",
+    technologies: [
+      "Python",
+      "FastAPI",
+      "Next.js",
+      "TypeScript",
+      "Terraform",
+      "GCP (GKE, CloudSQL, Secret Manager, VPC)",
+      "Docker",
+      "Kubernetes",
+      "Redis",
+      "PostgreSQL",
+      "Datadog",
+      "Gemini AI"
+    ],
+    details: [
+      "Architected security gateway with 4 FastAPI microservices—Gateway (orchestration, rate limiting), Sentinel (input validation), Guardian (output validation), and Eagle-Eye (IAM)—processing LLM requests through a secure validation pipeline",
+      "Engineered Sentinel service detecting 12+ threat patterns (SQL injection, XSS, jailbreaks) via regex and Gemini AI with PII redaction achieving 95%+ accuracy; Guardian performs hallucination detection and toxicity filtering with configurable per-tenant safety thresholds",
+      "Deployed auto-scaling GKE cluster (2-8 nodes) via Terraform IaC with CloudSQL PostgreSQL 15 (HA, private IP), Redis rate limiter handling 1000+ req/min, VPC firewall rules, and Secret Manager for credential rotation",
+      "Implemented Datadog APM with distributed tracing across services, custom DogStatsD metrics (threats_blocked, latency_p99, token_usage), and tiered alerting (P1 DDoS, P2 abnormal token usage, P3 exposed API keys) triggering PagerDuty and Slack notifications",
+      "Built Next.js 15 dashboard with Eagle-Eye IAM service enabling multi-tenant API key management, real-time usage analytics with quota enforcement, and role-based access control for application and user management"
+    ],
+    liveDemoUrl: "https://www.shield.clestiq.com",
+    githubUrl: "https://github.com/orgs/ClestiqShield/repositories",
+    imageUrl: "/assets/Projects/ClestiqShield.png",
+  },
+  {
     title: "Splitlyr - Expense Sharing Platform",
     category: "Software Development",
     description:
