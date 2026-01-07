@@ -53,7 +53,7 @@ const skillCategories: SkillCategory[] = [
       { name: "Neo4J", logo: "/assets/Tools/Backend/Neo4J.svg" },
       { name: "ChromaDB", logo: "/assets/Tools/Backend/ChromaDB.svg" },
       { name: "QdrantDB", logo: "/assets/Tools/Backend/QdrantDB.svg" },
-      { name: "Redis", logo: "/assets/Tools/Backend/Redis.svg" },
+      { name: "Redis", logo: "/assets/Tools/Tools/Redis.svg" },
     ]
   },
   {
