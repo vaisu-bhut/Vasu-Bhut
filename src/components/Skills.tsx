@@ -53,6 +53,7 @@ const skillCategories: SkillCategory[] = [
       { name: "Neo4J", logo: "/assets/Tools/Backend/Neo4J.svg" },
       { name: "ChromaDB", logo: "/assets/Tools/Backend/ChromaDB.svg" },
       { name: "QdrantDB", logo: "/assets/Tools/Backend/QdrantDB.svg" },
+      { name: "Redis", logo: "/assets/Tools/Backend/Redis.svg" },
     ]
   },
   {
@@ -81,20 +82,7 @@ const skillCategories: SkillCategory[] = [
       { name: "Postman", logo: "/assets/Tools/Frontend/Postman.svg" },
       { name: "Jira", logo: "/assets/Tools/Frontend/Jira.svg" },
       { name: "Jest", logo: "/assets/Tools/Frontend/Jest.svg" },
-    ]
-  },
-  {
-    name: "DS & ML",
-    skills: [
-      { name: "Scikit-learn", logo: "/assets/Tools/ML&Data/Scikit.svg" },
-      { name: "Pandas", logo: "/assets/Tools/ML&Data/pandas.svg" },
-      { name: "NumPy", logo: "/assets/Tools/ML&Data/numpy.svg" },
-      { name: "XGBoost", logo: "/assets/Tools/ML&Data/XGBoost.png" },
-      { name: "LightGBM", logo: "/assets/Tools/ML&Data/lightgbm.svg" },
-      { name: "PyTorch", logo: "/assets/Tools/ML&Data/pytorch.svg" },
-      { name: "Feature Engineering", logo: "/assets/Tools/ML&Data/feature.svg" },
-      { name: "Ploty", logo: "/assets/Tools/ML&Data/ploty.svg" },
-      { name: "Data Modelling", logo: "/assets/Tools/ML&Data/DataModelling.png" },
+      { name: "Datadog", logo: "/assets/Tools/Tools/Datadog.svg" },
     ]
   },
   {
