@@ -23,7 +23,7 @@ interface Project {
 const projectsData: Project[] = [
   {
     title: "Clestiq Shield - AI Security Gateway Platform",
-    category: "AI/ML & Cloud Infrastructure",
+    category: "Software Development",
     description:
       "An enterprise security gateway that protects LLM applications from prompt injection, data leakage, and hallucinations—risks that direct SDK calls cannot prevent",
     technologies: [
