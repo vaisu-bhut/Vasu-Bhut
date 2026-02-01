@@ -83,8 +83,7 @@ const skillCategories: SkillCategory[] = [
       { name: "Datadog", logo: "/assets/Tools/Tools/Datadog.svg" },
       { name: "Prometheus", logo: "/assets/Tools/Tools/Prometheus.svg" },
       { name: "Graphana", logo: "/assets/Tools/Tools/Graphana.svg" },
-      { name: "Loki Logs", logo: "/assets/Tools/Tools/LokiLogs.svg" },
-      { name: "Tempo", logo: "/assets/Tools/Tools/Tempo.svg" }      
+      { name: "Loki Logs", logo: "/assets/Tools/Tools/LokiLogs.svg" }
     ]
   },
 ];
