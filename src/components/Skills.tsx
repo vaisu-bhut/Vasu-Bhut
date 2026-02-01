@@ -15,25 +15,19 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Programming",
     skills: [
-      { name: "Python", logo: "/assets/Tools/Programming/Python.svg" },
-      { name: "JavaScript", logo: "/assets/Tools/Programming/Javascript.svg" },
       { name: "TypeScript", logo: "/assets/Tools/Programming/Typescript.svg" },
       { name: "SQL", logo: "/assets/Tools/Programming/SQL.svg" },
-      { name: "C++", logo: "/assets/Tools/Programming/C++.svg" }
+      { name: "C++", logo: "/assets/Tools/Programming/C++.svg" },
+      { name: "Bash", logo: "/assets/Tools/Programming/Bash.svg" }
     ]
   },
   {
     name: "Frontend",
     skills: [
-      { name: "ReactJS/React Native", logo: "/assets/Tools/Frontend/ReactJs.svg" },
-      { name: "NextJS", logo: "/assets/Tools/Frontend/NextJs.svg" },
-      { name: "HTML", logo: "/assets/Tools/Frontend/Html.svg" },
-      { name: "CSS", logo: "/assets/Tools/Frontend/Css.svg" },
+      { name: "React Native", logo: "/assets/Tools/Frontend/ReactJs.svg" },
+      { name: "NextTS", logo: "/assets/Tools/Frontend/NextJs.svg" },
       { name: "SCSS", logo: "/assets/Tools/Frontend/Sass.svg" },
       { name: "Tailwind CSS", logo: "/assets/Tools/Frontend/Tailwind.svg" },
-      { name: "Material UI", logo: "/assets/Tools/Frontend/MaterialUI.svg" },
-      { name: "Shadcn UI", logo: "/assets/Tools/Frontend/shadcn.png" },
-      { name: "Radix UI", logo: "/assets/Tools/Frontend/radix.png" },
       { name: "Bootstrap", logo: "/assets/Tools/Frontend/Bootstrap.svg" },
       { name: "Streamlit", logo: "/assets/Tools/Frontend/Streamlit.svg" }
     ]
@@ -41,8 +35,8 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Backend & Databases",
     skills: [
-      { name: "NodeJS", logo: "/assets/Tools/Backend/Nodejs.svg" },
-      { name: "ExpressJS", logo: "/assets/Tools/Backend/Expressjs.png" },
+      { name: "NodeJS(ExpressJS)", logo: "/assets/Tools/Backend/Nodejs.svg" },
+      { name: "Rust(Axum)", logo: "/assets/Tools/Backend/Rust.svg" },
       { name: "FastAPI", logo: "/assets/Tools/Backend/FastAPI.svg" },
       { name: "REST API", logo: "/assets/Tools/Backend/RestAPI.svg" },
       { name: "WebSockets", logo: "/assets/Tools/Backend/Websockets.png" },
@@ -52,7 +46,6 @@ const skillCategories: SkillCategory[] = [
       { name: "PostgreSQL", logo: "/assets/Tools/Backend/PostGreSQL.svg" },
       { name: "Neo4J", logo: "/assets/Tools/Backend/Neo4J.svg" },
       { name: "ChromaDB", logo: "/assets/Tools/Backend/ChromaDB.svg" },
-      { name: "QdrantDB", logo: "/assets/Tools/Backend/QdrantDB.svg" },
       { name: "Redis", logo: "/assets/Tools/Tools/Redis.svg" },
     ]
   },
@@ -77,24 +70,21 @@ const skillCategories: SkillCategory[] = [
       { name: "CI/CD", logo: "/assets/Tools/Tools/CiCd.png" },
       { name: "GitHub Actions", logo: "/assets/Tools/Tools/Github.png" },
       { name: "Vercel", logo: "/assets/Tools/Tools/vercel.png" },
-      { name: "Netlify", logo: "/assets/Tools/Tools/netlify.png" },
-      { name: "Git/GitHub", logo: "/assets/Tools/Tools/git.svg" },
-      { name: "Postman", logo: "/assets/Tools/Frontend/Postman.svg" },
-      { name: "Jira", logo: "/assets/Tools/Frontend/Jira.svg" },
       { name: "Jest", logo: "/assets/Tools/Frontend/Jest.svg" },
-      { name: "Datadog", logo: "/assets/Tools/Tools/Datadog.svg" },
     ]
   },
   {
-    name: "AI/LLM & Automation",
+    name: "LLM Automation & Observations",
     skills: [
       { name: "LangChain/Graph", logo: "/assets/Tools/AI_LLM/Langhain.svg" },
       { name: "Prompt Engineering", logo: "/assets/Tools/AI_LLM/PromptEngineering.png" },
       { name: "RAG", logo: "/assets/Tools/AI_LLM/RAG.png" },
       { name: "Vertex AI", logo: "/assets/Tools/AI_LLM/Vertex.webp" },
-      { name: "ADK by Google", logo: "/assets/Tools/AI_LLM/ADK.webp" },
-      { name: "n8n Workflows", logo: "/assets/Tools/AI_LLM/n8n.svg" },
-
+      { name: "Datadog", logo: "/assets/Tools/Tools/Datadog.svg" },
+      { name: "Prometheus", logo: "/assets/Tools/Tools/Prometheus.svg" },
+      { name: "Graphana", logo: "/assets/Tools/Tools/Graphana.svg" },
+      { name: "Loki Logs", logo: "/assets/Tools/Tools/LokiLogs.svg" },
+      { name: "Tempo", logo: "/assets/Tools/Tools/Tempo.svg" }      
     ]
   },
 ];
