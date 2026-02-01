@@ -22,6 +22,20 @@ interface Project {
 
 const projectsData: Project[] = [
   {
+  title: "PetPulse: AI-Powered Pet Guardian System",
+  category: "Software Development",
+  description: "Autonomous pet monitoring system using Gemini 3 Pro for behavioral analysis, Prometheus/Grafana for anomaly detection, and Rust/Axum backend deployed on GCP Kubernetes.",
+  tech: ["Rust", "Axum", "Gemini 3 Pro", "Kubernetes", "PostgreSQL", "Prometheus", "Grafana", "Next.js"],
+  liveLink: "https://www.petpulse.clestiq.com/",
+  githubLink: "https://github.com/orgs/Clestiq-PetPulse/repositories",
+  features: [
+    "Marathon agent with 8+ hour autonomous monitoring",
+    "Real-time anomaly detection comparing patterns to learned baselines",
+    "Email/SMS alerts with AI-generated evidence summaries",
+    "One-tap user-reviewed emergency responses"
+  ]
+},
+  {
     title: "Clestiq Shield - AI Security Gateway Platform",
     category: "Software Development",
     description:
@@ -106,117 +120,6 @@ const projectsData: Project[] = [
     imageUrl: "",
   },
   {
-    title: "Conlieve - Network Management Companion",
-    category: "Software Development",
-    description:
-      "A platform that optimizes, priorities and specializes Network",
-    technologies: [
-      "React.js",
-      "Tailwind CSS",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "AWS (S3, CloudFront, Lambda, API Gateway)",
-    ],
-    details: [
-      "Deployed as a serverless Progressive Web App using AWS S3, and Lambda for high availability and global scalability",
-      "Built dynamic dashboards with interactive charts to visualize relationship growth, communication frequency, and engagement trends",
-      "Implemented secure, tag-based contact profiles with reminders and note-keeping features to streamline personal and professional networking",
-      "Ensured fast, mobile-first  performance through optimized design, SSR caching strategies, and lazy-loaded components"
-    ],
-    liveDemoUrl: "https://connect.vasubhut.com",
-    githubUrl: "https://github.com/vaisu-bhut/Project-Connect",
-    imageUrl: "/assets/Projects/Conlieve.png",
-  },
-  {
-    title: "ArcFit Fitness",
-    category: "Software Development",
-    description:
-      "A responsive fitness website with BMI calculator and class scheduling",
-    technologies: [
-      "React.js",
-      "Tailwind CSS",
-      "Node.js",
-      "Express",
-      "Nodemailer",
-    ],
-    details: [
-      "Built a responsive SPA showcasing Hero banners, BMI calculator, trainer & testimonial carousels",
-      "Added a lightweight Node/Express backend with Nodemailer for contact form submissions",
-    ],
-    liveDemoUrl: "https://arcfit.vasubhut.com",
-    githubUrl: "https://github.com/vaisu-bhut/ArcFit",
-    imageUrl: "/assets/Projects/ArcFit.png",
-  },
-  {
-    title: "UberOla – Car Rental Booking",
-    category: "Software Development",
-    description: "A full-stack MERN car rental booking platform",
-    technologies: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
-    details: [
-      "Full-stack MERN app for browsing vehicle models and booking rides",
-      "Mobile-first UI with collapsible sidebar for desktop and bottom-bar for mobile",
-    ],
-    liveDemoUrl: "https://uberola.vasubhut.com",
-    githubUrl: "https://github.com/vaisu-bhut/UberOla",
-    imageUrl: "/assets/Projects/UberOla.png",
-  },
-  {
-    title: "Drug Development Lifecycle Management System (ReguPharm)",
-    category: "Software Development",
-    description:
-      "The Drug Development Lifecycle Management System serves as a centralized platform to streamline and manage the complex processes from discovery to approval",
-    technologies: ["Java", "Swing", "SQLite", "NetBeans"],
-    details: [
-      "Architected a full-stack Java application to streamline FDA-compliant drug development workflows, enabling real-time collaboration across 8+ roles (Research Scientists, Clinical Researchers, FDA Officers) and reducing manual tracking errors",
-      "Designed a role-based access control (RBAC) system using Java Swing for frontend dashboards and SQLite for secure data storage, ensuring compliance with regulatory standards (FDA, GLP)",
-      "Implemented modular Java backend with dedicated classes for drug composition tracking, inspection records, and automated report generation, improving data retrieval speed by 25%",
-      "Integrated real-time status updates via a centralized dashboard, allowing stakeholders to monitor drug approval stages (discovery, trials, inspections) and address bottlenecks proactively",
-    ],
-    liveDemoUrl: "",
-    githubUrl: "",
-    imageUrl: "/assets/Projects/ReguPharm.png",
-  },
-  {
-    title: "OpenAI Article Summarizer",
-    category: "Software Development",
-    description: "Web app that summarizes articles using AI",
-    technologies: ["React", "Redux Toolkit", "Tailwind CSS", "RapidAPI"],
-    details: [
-      "Uses RTK Query to hit RapidAPI's extractor endpoint for article summaries",
-      "Features localStorage-based caching and instant copy-to-clipboard UX",
-    ],
-    liveDemoUrl: "https://theai.vasubhut.com",
-    githubUrl: "https://github.com/vaisu-bhut/Theai",
-    imageUrl: "/assets/Projects/TheAI.png",
-  },
-  {
-    title: "Texty – Text Converter & Analyzer",
-    category: "Software Development",
-    description: "Text utility app with real-time metrics and transformations",
-    technologies: ["React 17", "JavaScript", "Bootstrap 5", "HTML5/CSS3"],
-    details: [
-      "One-click text transformations and live metrics calculation",
-      "Lightweight React hooks-based UI with Bootstrap styling",
-    ],
-    liveDemoUrl: "https://texty.vasubhut.com",
-    githubUrl: "https://github.com/vaisu-bhut/Texty",
-    imageUrl: "/assets/Projects/Texty.png",
-  },
-  {
-    title: "JustYours E-Commerce Store",
-    category: "Software Development",
-    description: "E-commerce platform with category-based browsing",
-    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "CSS"],
-    details: [
-      "Single-page React storefront with Express API and MongoDB Atlas",
-      "Newsletter capture & automated email workflow with Nodemailer",
-    ],
-    liveDemoUrl: "https://justyours.vasubhut.com",
-    githubUrl: "https://github.com/vaisu-bhut/JustYours",
-    imageUrl: "/assets/Projects/JustYours.png",
-  },
-  {
     title: "SnakeMania",
     category: "Software Development",
     description: "Browser-based Snake game with audio effects",
@@ -228,25 +131,6 @@ const projectsData: Project[] = [
     liveDemoUrl: "https://snakemania.vasubhut.com",
     githubUrl: "https://github.com/vaisu-bhut/SnakeMania",
     imageUrl: "/assets/Projects/SnakeMania.png",
-  },
-  {
-    title: "TheRichMindset Blog",
-    category: "Software Development",
-    description: "Responsive multi-page self-improvement blog",
-    technologies: [
-      "HTML5",
-      "CSS3",
-      "Bootstrap 5",
-      "Tailwind CSS",
-      "JavaScript",
-    ],
-    details: [
-      "Features carousel hero, animated navbar, and card-style article grid",
-      "Styled with Bootstrap 5 components and Tailwind utility classes",
-    ],
-    liveDemoUrl: "https://therichmindset.vasubhut.com",
-    githubUrl: "https://github.com/vaisu-bhut/TheRichMindset",
-    imageUrl: "/assets/Projects/TheRichMindset.png",
   },
   {
     title: "Loan Approval Prediction",
