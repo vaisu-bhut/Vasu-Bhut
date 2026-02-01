@@ -63,7 +63,7 @@ const skillCategories: SkillCategory[] = [
     ]
   },
   {
-    name: "LLM Automation & Observations",
+    name: "LLM & Observations",
     skills: [
       { name: "LangChain/Graph", logo: "/assets/Tools/AI_LLM/Langhain.svg" },
       { name: "Prompt Engineering", logo: "/assets/Tools/AI_LLM/PromptEngineering.png" },
