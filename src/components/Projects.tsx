@@ -88,7 +88,6 @@ const projectsData: Project[] = [
       "Engineered auto-scaling GCP infrastructure using Terraform IaC with CPU-based instance groups (2-10 VMs), global HTTPS load balancer with managed SSL certificates, and VPC networking for high availability",
       "Developed production-ready REST API with JWT authentication, role-based access control, and MongoDB database architecture optimized for complex relationship queries and balance aggregations across multiple expenses"
     ],
-    liveDemoUrl: "https://www.splitlyr.clestiq.com",
     githubUrl: "https://github.com/vaisu-bhut/CoinBreakr",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.clestiq.splitlyr.app",
     imageUrl: "/assets/Projects/Splitlyr.png",
@@ -115,7 +114,6 @@ const projectsData: Project[] = [
       "Implemented RAG-based support system that searches historical tickets and chat logs to find similar issues, generates contextual responses using LLM, and escalates to human agents when confidence is low",
       "Engineered hybrid cloud infrastructure on GCP with Terraform managing Cloud Run serverless deployment, Vertex AI embeddings for semantic search, and automated CI/CD pipeline for zero-downtime deployments"
     ],
-    liveDemoUrl: "https://dataalchemist.clestiq.com",
     githubUrl: "https://github.com/vaisu-bhut/dataalchemist",
     imageUrl: "",
   },
