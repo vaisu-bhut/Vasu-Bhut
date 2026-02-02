@@ -18,8 +18,8 @@ const experienceData: ExperienceItem[] = [
     period: "Jan 2026 - Present",
     location: "Boston, MA",
     description: [
-      "Architecting workflow integration enabling police departments to use Badge 6 as primary accreditation management platform while maintaining PowerDMS for state-mandated submission and approval workflows",
-      "Designing system architecture where PDs, accrediting bodies, and assessors perform all accreditation work within Badge 6, with automated synchronization to PowerDMS for compliance tracking and regulatory approval, similar to developing in an IDE but submitting to Canvas for grading"
+      "Architecting workflow integration enabling police departments to use Badge 6 as primary accreditation management platform while maintaining gov. mandated platforms for state-mandated submission and approval workflows",
+      "Designing system architecture where PDs, accrediting bodies, and assessors perform all accreditation work within Badge 6, with automated synchronization to gov. mandated platforms for compliance tracking and regulatory approval, similar to developing in an IDE but submitting to Canvas for grading"
     ],
     tech: ["Software Development"]
   },
