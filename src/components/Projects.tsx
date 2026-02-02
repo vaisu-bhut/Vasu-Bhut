@@ -22,19 +22,19 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-  title: "PetPulse: AI-Powered Pet Guardian System",
-  category: "Software Development",
-  description: "Autonomous pet monitoring system using Gemini 3 Pro for behavioral analysis, Prometheus/Grafana for anomaly detection, and Rust/Axum backend deployed on GCP Kubernetes.",
-  tech: ["Rust", "Axum", "Gemini 3 Pro", "Kubernetes", "PostgreSQL", "Prometheus", "Grafana", "Next.js"],
-  liveLink: "https://www.petpulse.clestiq.com/",
-  githubLink: "https://github.com/orgs/Clestiq-PetPulse/repositories",
-  features: [
-    "Marathon agent with 8+ hour autonomous monitoring",
-    "Real-time anomaly detection comparing patterns to learned baselines",
-    "Email/SMS alerts with AI-generated evidence summaries",
-    "One-tap user-reviewed emergency responses"
-  ]
-},
+    title: "PetPulse: AI-Powered Pet Guardian System",
+    category: "Software Development",
+    description: "Autonomous pet monitoring system using Gemini 3 Pro for behavioral analysis, Prometheus/Grafana for anomaly detection, and Rust/Axum backend deployed on GCP Kubernetes.",
+    technologies: ["Rust", "Axum", "Gemini 3 Pro", "Kubernetes", "PostgreSQL", "Prometheus", "Grafana", "Next.js"],
+    liveDemoUrl: "https://www.petpulse.clestiq.com/",
+    githubUrl: "https://github.com/orgs/Clestiq-PetPulse/repositories",
+    details: [
+      "Marathon agent with 8+ hour autonomous monitoring",
+      "Real-time anomaly detection comparing patterns to learned baselines",
+      "Email/SMS alerts with AI-generated evidence summaries",
+      "One-tap user-reviewed emergency responses"
+    ]
+  },
   {
     title: "Clestiq Shield - AI Security Gateway Platform",
     category: "Software Development",
@@ -55,11 +55,11 @@ const projectsData: Project[] = [
       "Gemini AI"
     ],
     details: [
-      "Architected security gateway with 4 FastAPI microservices—Gateway (orchestration, rate limiting), Sentinel (input validation), Guardian (output validation), and Eagle-Eye (IAM)—processing LLM requests through a secure validation pipeline",
-      "Engineered Sentinel service detecting 12+ threat patterns (SQL injection, XSS, jailbreaks) via regex and Gemini AI with PII redaction achieving 95%+ accuracy; Guardian performs hallucination detection and toxicity filtering with configurable per-tenant safety thresholds",
-      "Deployed auto-scaling GKE cluster (2-8 nodes) via Terraform IaC with CloudSQL PostgreSQL 15 (HA, private IP), Redis rate limiter handling 1000+ req/min, VPC firewall rules, and Secret Manager for credential rotation",
-      "Implemented Datadog APM with distributed tracing across services, custom DogStatsD metrics (threats_blocked, latency_p99, token_usage), and tiered alerting (P1 DDoS, P2 abnormal token usage, P3 exposed API keys) triggering PagerDuty and Slack notifications",
-      "Built Next.js 15 dashboard with Eagle-Eye IAM service enabling multi-tenant API key management, real-time usage analytics with quota enforcement, and role-based access control for application and user management"
+      "Architected security gateway with 4 FastAPI microservices (Gateway, Sentinel, Guardian, Eagle-Eye) processing LLM requests",
+      "Engineered Sentinel for 12+ threat patterns (SQLI, XSS, Jailbreaks) and Guardian for toxicity filtering",
+      "Deployed auto-scaling GKE cluster via Terraform with CloudSQL, Redis rate limiting, and VPC firewall rules",
+      "Implemented Datadog APM for distributed tracing, custom metrics, and tiered alerting (PagerDuty/Slack)",
+      "Built Next.js dashboard for multi-tenant API key management and real-time usage analytics"
     ],
     liveDemoUrl: "https://www.shield.clestiq.com",
     githubUrl: "https://github.com/orgs/ClestiqShield/repositories",
@@ -83,10 +83,10 @@ const projectsData: Project[] = [
       "TypeScript"
     ],
     details: [
-      "Built cross-platform mobile app (iOS/Android) enabling users to create expense groups, split bills with custom ratios, track settlements, and manage friend networks with real-time balance calculations",
-      "Implemented offline-capable expense tracking with automatic sync, contact integration for easy friend addition, and intelligent expense splitting algorithms for equal, percentage-based, and custom splits",
-      "Engineered auto-scaling GCP infrastructure using Terraform IaC with CPU-based instance groups (2-10 VMs), global HTTPS load balancer with managed SSL certificates, and VPC networking for high availability",
-      "Developed production-ready REST API with JWT authentication, role-based access control, and MongoDB database architecture optimized for complex relationship queries and balance aggregations across multiple expenses"
+      "Built cross-platform mobile app (iOS/Android) for expense grouping, bill splitting, and balance tracking",
+      "Implemented offline-capable tracking with auto-sync and intelligent splitting algorithms",
+      "Engineered auto-scaling GCP infrastructure using Terraform with HTTPS load balancing",
+      "Developed production-ready REST API with JWT auth and MongoDB for complex balance aggregations"
     ],
     githubUrl: "https://github.com/vaisu-bhut/CoinBreakr",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.clestiq.splitlyr.app",
@@ -109,10 +109,10 @@ const projectsData: Project[] = [
       "LLM Integration"
     ],
     details: [
-      "Created AI chat interface that analyzes uploaded datasets, automatically detects and fixes data quality issues (duplicates, missing values, inconsistencies), and suggests optimal data transformations",
-      "Built relationship discovery engine using Neo4j graph database to map connections between data entities, visualize complex relationships, and uncover hidden patterns across datasets",
-      "Implemented RAG-based support system that searches historical tickets and chat logs to find similar issues, generates contextual responses using LLM, and escalates to human agents when confidence is low",
-      "Engineered hybrid cloud infrastructure on GCP with Terraform managing Cloud Run serverless deployment, Vertex AI embeddings for semantic search, and automated CI/CD pipeline for zero-downtime deployments"
+      "Created AI chat interface for automated data quality detection and transformation suggestions",
+      "Built relationship discovery engine using Neo4j to map entities and visualize hidden patterns",
+      "Implemented RAG-based support system using historical data for contextual responses",
+      "Engineered hybrid cloud infrastructure on GCP with Cloud Run, Vertex AI, and automated CI/CD"
     ],
     githubUrl: "https://github.com/vaisu-bhut/dataalchemist",
     imageUrl: "",
@@ -146,9 +146,9 @@ const projectsData: Project[] = [
       "Cross-Validation",
     ],
     details: [
-      "Built a loan approval predictor using synthetic financial data, achieving ROC-AUC = 0.96037 (currently top on Kaggle leaderboard)",
-      "Feature engineering techniques like debt-to-income ratio calculation and XGBoost tuned with RandomizedSearchCV",
-      "Addressed synthetic data challenges by cross-validating with the original dataset, ensuring robustness against distribution shifts",
+      "Achieved ROC-AUC 0.96 with loan approval predictor on synthetic financial data",
+      "Optimized XGBoost with RandomizedSearchCV and advanced feature engineering",
+      "Addressed synthetic data challenges by cross-validating with the original dataset",
       "Deployed Scikit-learn pipelines for reproducible preprocessing",
     ],
     githubUrl: "https://github.com/vaisu-bhut/Loan-Prediction",
@@ -245,10 +245,10 @@ const Projects = () => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    
+
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -257,7 +257,7 @@ const Projects = () => {
 
   // Determine how many projects to show based on screen size and showAll state
   const defaultProjectCount = isMobile ? 2 : 4;
-  
+
   const projectsToShow = showAll
     ? filteredProjects
     : filteredProjects.slice(0, defaultProjectCount);

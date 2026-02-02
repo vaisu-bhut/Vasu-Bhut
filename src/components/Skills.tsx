@@ -80,30 +80,30 @@ const skillCategories: SkillCategory[] = [
 // Framer motion animations
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: { 
+  visible: {
     opacity: 1,
-    transition: { 
+    transition: {
       staggerChildren: 0.1
-    } 
+    }
   }
 };
 
 const itemVariants = {
   hidden: { y: 20, opacity: 0 },
-  visible: { 
-    y: 0, 
+  visible: {
+    y: 0,
     opacity: 1,
     transition: { type: "spring", stiffness: 100 }
   }
 };
 
 const tabVariants = {
-  inactive: { 
+  inactive: {
     backgroundImage: 'linear-gradient(to right, transparent, transparent)',
     scale: 0.95,
     opacity: 0.7
   },
-  active: { 
+  active: {
     backgroundImage: 'linear-gradient(to right, hsl(var(--primary)), hsl(var(--secondary)))',
     scale: 1,
     opacity: 1
@@ -140,7 +140,7 @@ const Skills = () => {
               }}
               className={cn(
                 "py-2 px-4 rounded-lg transition-all duration-300 flex-1 min-w-[140px] sm:min-w-0 text-sm sm:text-base whitespace-nowrap",
-                activeCategory === category.name 
+                activeCategory === category.name
                   ? "text-primary-foreground font-medium shadow-md"
                   : "text-muted-foreground hover:bg-muted/80"
               )}
@@ -156,99 +156,107 @@ const Skills = () => {
         </div>
 
         {/* Skills Grid with Logos - Mobile shows limited, Desktop shows all */}
-        <AnimatePresence mode="wait">
-          {/* Desktop view - show all skills */}
-          <motion.div
-            key={activeCategory}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-            className="hidden sm:grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
-          >
-            {currentSkills.map((skill, index) => (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.3,
-                  delay: index * 0.05,
-                  type: "spring",
-                  stiffness: 100
-                }}
-                className="bg-muted/50 rounded-lg border border-muted p-4 flex flex-col items-center justify-center h-32 text-center card-hover group"
-              >
-                <div className="flex flex-col items-center justify-center h-full">
-                  <motion.img 
-                    src={skill.logo} 
-                    alt={skill.name}
-                    className="h-12 w-12 mb-3"
-                    animate={{ rotate: [0, 0, 10, -10, 0], scale: [1, 1.1, 1.1, 1, 1] }}
-                    transition={{ 
-                      duration: 2,
-                      ease: "easeInOut",
-                      times: [0, 0.2, 0.5, 0.8, 1],
-                      repeat: Infinity,
-                      repeatDelay: 1
-                    }}
-                    whileHover={{ scale: 1.2 }}
-                  />
-                  <div className="text-sm font-medium group-hover:text-primary transition-colors">
-                    {skill.name}
-                  </div>
-                  <div className="w-8 h-0.5 bg-primary/50 mx-auto mt-2 transform origin-left transition-transform group-hover:scale-x-150"></div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
+        {/* Skills Grid with Logos - Mobile shows limited, Desktop shows all */}
 
-          {/* Mobile view - show limited skills with expand */}
-          <motion.div
-            key={`${activeCategory}-mobile`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-            className="grid grid-cols-2 gap-4 sm:hidden"
-          >
-            {(showAll ? currentSkills : currentSkills.slice(0, 8)).map((skill, index) => (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.3,
-                  delay: index * 0.05,
-                  type: "spring",
-                  stiffness: 100
-                }}
-                className="bg-muted/50 rounded-lg border border-muted p-4 flex flex-col items-center justify-center h-32 text-center card-hover group"
-              >
-                <div className="flex flex-col items-center justify-center h-full">
-                  <motion.img 
-                    src={skill.logo} 
-                    alt={skill.name}
-                    className="h-12 w-12 mb-3"
-                    animate={{ rotate: [0, 0, 10, -10, 0], scale: [1, 1.1, 1.1, 1, 1] }}
-                    transition={{ 
-                      duration: 2,
-                      ease: "easeInOut",
-                      times: [0, 0.2, 0.5, 0.8, 1],
-                      repeat: Infinity,
-                      repeatDelay: 1
-                    }}
-                    whileHover={{ scale: 1.2 }}
-                  />
-                  <div className="text-sm font-medium group-hover:text-primary transition-colors">
-                    {skill.name}
+        {/* Desktop view - show all skills */}
+        <div className="hidden sm:block">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeCategory}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+              className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
+            >
+              {currentSkills.map((skill, index) => (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: index * 0.05,
+                    type: "spring",
+                    stiffness: 100
+                  }}
+                  className="bg-muted/50 rounded-lg border border-muted p-4 flex flex-col items-center justify-center h-32 text-center card-hover group"
+                >
+                  <div className="flex flex-col items-center justify-center h-full">
+                    <motion.img
+                      src={skill.logo}
+                      alt={skill.name}
+                      className="h-12 w-12 mb-3"
+                      animate={{ rotate: [0, 0, 10, -10, 0], scale: [1, 1.1, 1.1, 1, 1] }}
+                      transition={{
+                        duration: 2,
+                        ease: "easeInOut",
+                        times: [0, 0.2, 0.5, 0.8, 1],
+                        repeat: Infinity,
+                        repeatDelay: 1
+                      }}
+                      whileHover={{ scale: 1.2 }}
+                    />
+                    <div className="text-sm font-medium group-hover:text-primary transition-colors">
+                      {skill.name}
+                    </div>
+                    <div className="w-8 h-0.5 bg-primary/50 mx-auto mt-2 transform origin-left transition-transform group-hover:scale-x-150"></div>
                   </div>
-                  <div className="w-8 h-0.5 bg-primary/50 mx-auto mt-2 transform origin-left transition-transform group-hover:scale-x-150"></div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </AnimatePresence>
+                </motion.div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Mobile view - show limited skills with expand */}
+        <div className="block sm:hidden">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`${activeCategory}-mobile`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+              className="grid grid-cols-2 gap-4"
+            >
+              {(showAll ? currentSkills : currentSkills.slice(0, 8)).map((skill, index) => (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: index * 0.05,
+                    type: "spring",
+                    stiffness: 100
+                  }}
+                  className="bg-muted/50 rounded-lg border border-muted p-4 flex flex-col items-center justify-center h-32 text-center card-hover group"
+                >
+                  <div className="flex flex-col items-center justify-center h-full">
+                    <motion.img
+                      src={skill.logo}
+                      alt={skill.name}
+                      className="h-12 w-12 mb-3"
+                      animate={{ rotate: [0, 0, 10, -10, 0], scale: [1, 1.1, 1.1, 1, 1] }}
+                      transition={{
+                        duration: 2,
+                        ease: "easeInOut",
+                        times: [0, 0.2, 0.5, 0.8, 1],
+                        repeat: Infinity,
+                        repeatDelay: 1
+                      }}
+                      whileHover={{ scale: 1.2 }}
+                    />
+                    <div className="text-sm font-medium group-hover:text-primary transition-colors">
+                      {skill.name}
+                    </div>
+                    <div className="w-8 h-0.5 bg-primary/50 mx-auto mt-2 transform origin-left transition-transform group-hover:scale-x-150"></div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
         {/* View More / View Less Button - Only on mobile when more than 8 skills */}
         {currentSkills.length > 8 && (
